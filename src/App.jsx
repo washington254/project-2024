@@ -24,33 +24,36 @@ export default function App() {
 
   const [device, setDevice] = useState("web");
   const [backVideoX, setBackVideoX] = useState(0);
-
   const cameraRef = useRef();
 
   useEffect(() => {
     // Handler to call on window resize
     function handleResize() {
-      const { innerWidth, innerHeight } = window;
+      const { innerWidth } = window;
 
-      // Your existing logic
+      // Adjust the camera position based on screen size
+      const distanceModifier = innerWidth < 768 ? 4 : 0; // Adjust this condition based on your design
+      const newZPosition = 4.5 + distanceModifier;
+
+      // Update the camera position
+      cameraRef.current.position.set(3.2, 2.7, newZPosition);
+
+      // Your existing logic for handling other resize-related changes
       setDevice(innerWidth > innerHeight ? "web" : "mobile");
+      console.log((960 - innerWidth / 2) * -1);
       setBackVideoX(innerWidth > innerHeight ? 0 : (960 - innerWidth / 2) * -1);
-
-      // Camera movement logic
-      if (innerWidth < 500 && cameraRef.current) {
-        cameraRef.current.position.x += 2; // Move camera on mobile
-        cameraRef.current.updateWorldMatrix(); // Update world matrix immediately
-      } else if (cameraRef.current) {
-        cameraRef.current.position.x = 3.2; // Reset to default position on larger screens
-        cameraRef.current.updateWorldMatrix(); // Update world matrix immediately
-      }
     }
 
+    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call initially
 
+    // Initial setup
+    handleResize();
+
+    // Cleanup on component unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   const mapNumRange = (num, inMin, inMax, outMin, outMax) =>
     ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 
