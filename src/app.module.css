@@ -50,7 +50,8 @@
 @media screen and (max-width: 500px) {
   .interfaceSection {
     justify-content: flex-start; /* Default justify-content for small screens */
-    transform: translateX(0%); /* Remove translation for all screens */
+    transform: translateX(0%);
+    text-align: center; /* Remove translation for all screens */
   }
 }
 
