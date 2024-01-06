@@ -24,17 +24,27 @@ export default function App() {
 
   const [device, setDevice] = useState("web");
   const [backVideoX, setBackVideoX] = useState(0);
+  const cameraRef = useRef();
 
   useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
+    const handleResize = () => {
       const { innerWidth, innerHeight } = window;
+
+      // Your existing logic
       setDevice(innerWidth > innerHeight ? "web" : "mobile");
-      console.log((960 - innerWidth / 2) * -1);
       setBackVideoX(innerWidth > innerHeight ? 0 : (960 - innerWidth / 2) * -1);
-    }
+
+      // Camera movement logic
+      if (innerWidth < 500) {
+        cameraRef.current.position.x += 2; // Move camera on mobile
+      } else {
+        cameraRef.current.position.x = 3.2; // Reset to default position on larger screens
+      }
+    };
+
     window.addEventListener("resize", handleResize);
-    handleResize();
+    handleResize(); // Call initially
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -42,8 +52,6 @@ export default function App() {
     ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 
   let x;
-
-  const cameraRef = useRef();
 
   useEffect(() => {
     if (scrollData) {
