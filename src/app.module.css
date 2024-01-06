@@ -9,17 +9,18 @@
   /* background-color: #ecdcd0; */
 }
 
-
-
-
 .skillsPage {
   width: 100vw;
   height: 105vh;
   position: absolute;
   top: 100vh;
-  background: linear-gradient(0deg, rgb(52, 47, 133) 0%, rgb(25, 25, 107) 51%, rgb(9, 21, 75) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(52, 47, 133) 0%,
+    rgb(25, 25, 107) 51%,
+    rgb(9, 21, 75) 100%
+  );
   overflow: hidden;
-
 }
 
 .scrollContainer {
@@ -27,9 +28,6 @@
   height: 100vh;
   background-color: rgb(201, 204, 50);
 }
-
-
-
 
 .interface {
   display: flex;
@@ -39,21 +37,15 @@
 }
 
 .interfaceSection {
-
+  position: relative;
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-}
-
-.interface-welcome{
-  display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateX(-20%);
 }
+
 .annotation {
   transition: all 0.5s ease-in-out;
   box-shadow: inset 0 0 0 0.09px white;
