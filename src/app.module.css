@@ -44,6 +44,7 @@
   align-items: center;
   justify-content: center;
   transform: translateX(-20.5%);
+  overflow: hidden;
 }
 
 .annotation {
@@ -64,9 +65,6 @@
   align-items: center;
   gap: 5px;
   z-index: 1000;
-}
-.interface-skills {
-  max-width: 10px;
 }
 
 .annotation:hover {
