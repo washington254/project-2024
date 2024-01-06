@@ -41,16 +41,16 @@
   height: 100vh;
   width: 100vw;
   display: flex;
+  justify-content: center; /* Change justify-content for large screens */
+  transform: translateX(-20.5%);
   align-items: center;
-  justify-content: flex-start; /* Default justify-content for small screens */
-  transform: translateX(0%); /* Remove translation for all screens */
   overflow: hidden;
 }
 
-@media screen (min-width: 500px) {
+@media screen and (max-width: 500px) {
   .interfaceSection {
-    justify-content: center; /* Change justify-content for large screens */
-    transform: translateX(-20.5%); /* Add translation for large screens */
+    justify-content: flex-start; /* Default justify-content for small screens */
+    transform: translateX(0%); /* Remove translation for all screens */
   }
 }
 
