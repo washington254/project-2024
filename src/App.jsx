@@ -36,9 +36,9 @@ export default function App() {
 
       // Camera movement logic
       if (innerWidth < 500) {
-        cameraRef.current.position.x += 5; // Move camera on mobile
+        cameraRef.current.position.y += 2; // Move camera on mobile
       } else {
-        cameraRef.current.position.x = 3.2; // Reset to default position on larger screens
+        cameraRef.current.position.y = 3.2; // Reset to default position on larger screens
       }
     };
 
