@@ -65,6 +65,9 @@
   gap: 5px;
   z-index: 1000;
 }
+.interface-skills {
+  max-width: fit-content;
+}
 
 .annotation:hover {
   box-shadow: inset 250px 0 0 0 white;
