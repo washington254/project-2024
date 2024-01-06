@@ -46,7 +46,7 @@ function Word({ children, ...props }) {
   );
 }
 
-function Cloud({ count = 4, radius = 18, wordsArray }) {
+function Cloud({ count = 4, radius = 20, wordsArray }) {
   const cloudRef = useRef();
 
   const words = useMemo(() => {
