@@ -46,7 +46,7 @@ function Word({ children, ...props }) {
   );
 }
 
-function Cloud({ count = 4, radius = 20, wordsArray }) {
+function Cloud({ count = 4, radius = 18, wordsArray }) {
   const cloudRef = useRef();
 
   const words = useMemo(() => {
@@ -59,7 +59,7 @@ function Cloud({ count = 4, radius = 20, wordsArray }) {
       for (let j = 0; j < count; j++)
         temp.push([
           new Vector3().setFromSpherical(
-            spherical.set(radius, phiSpan * i, thetaSpan * j)
+            spherical.set(radius, phiSpan * i, thetaSpan * j),
           ),
           wordsArray[(i - 1) * count + j],
         ]);
