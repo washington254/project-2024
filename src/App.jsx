@@ -31,8 +31,8 @@ export default function App() {
       const { innerWidth, innerHeight } = window;
 
       // Adjust the camera position based on screen size
-      const distanceModifier = innerWidth < 768 ? 4 : 0; // Adjust this condition based on your design
-      const newZPosition = 4.1 + distanceModifier;
+      const distanceModifier = innerWidth < 768 ? 3.1 : 0; // Adjust this condition based on your design
+      const newZPosition = 4.5 + distanceModifier;
 
       // Update the camera position if the ref is defined
       if (cameraRef.current) {
