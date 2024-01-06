@@ -66,7 +66,7 @@
   z-index: 1000;
 }
 .interface-skills {
-  max-width: fit-content;
+  max-width: 10px;
 }
 
 .annotation:hover {
