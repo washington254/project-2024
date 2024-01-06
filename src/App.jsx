@@ -35,8 +35,10 @@ export default function App() {
       const distanceModifier = innerWidth < 768 ? 4 : 0; // Adjust this condition based on your design
       const newZPosition = 4.5 + distanceModifier;
 
-      // Update the camera position
-      cameraRef.current.position.set(3.2, 2.7, newZPosition);
+      // Update the camera position if the ref is defined
+      if (cameraRef.current) {
+        cameraRef.current.position.set(3.2, 2.7, newZPosition);
+      }
 
       // Your existing logic for handling other resize-related changes
       setDevice(innerWidth > innerHeight ? "web" : "mobile");
