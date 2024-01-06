@@ -37,10 +37,6 @@ export default function App() {
       // Update the camera position if the ref is defined
       if (cameraRef.current) {
         cameraRef.current.position.set(3.2, 2.7, newZPosition);
-        console.log(
-          "Updated camera position:",
-          cameraRef.current.position.toArray(),
-        );
       }
 
       // Your existing logic for handling other resize-related changes
