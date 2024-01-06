@@ -24,10 +24,10 @@ export default function App() {
 
   const [device, setDevice] = useState("web");
   const [backVideoX, setBackVideoX] = useState(0);
-  const cameraRef = useRef();
 
   useEffect(() => {
-    const handleResize = () => {
+    // Handler to call on window resize
+    function handleResize() {
       const { innerWidth, innerHeight } = window;
 
       // Your existing logic
@@ -35,23 +35,26 @@ export default function App() {
       setBackVideoX(innerWidth > innerHeight ? 0 : (960 - innerWidth / 2) * -1);
 
       // Camera movement logic
-      if (innerWidth < 500) {
-        cameraRef.current.position.y += 2; // Move camera on mobile
-      } else {
-        cameraRef.current.position.y = 3.2; // Reset to default position on larger screens
+      if (innerWidth < 500 && cameraRef.current) {
+        cameraRef.current.position.x += 2; // Move camera on mobile
+        cameraRef.current.updateWorldMatrix(); // Update world matrix immediately
+      } else if (cameraRef.current) {
+        cameraRef.current.position.x = 3.2; // Reset to default position on larger screens
+        cameraRef.current.updateWorldMatrix(); // Update world matrix immediately
       }
-    };
+    }
 
     window.addEventListener("resize", handleResize);
     handleResize(); // Call initially
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
   const mapNumRange = (num, inMin, inMax, outMin, outMax) =>
     ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 
   let x;
+
+  const cameraRef = useRef();
 
   useEffect(() => {
     if (scrollData) {
