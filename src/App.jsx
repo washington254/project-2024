@@ -25,7 +25,6 @@ export default function App() {
   const [device, setDevice] = useState("web");
   const [backVideoX, setBackVideoX] = useState(0);
   const cameraRef = useRef();
-
   useEffect(() => {
     // Handler to call on window resize
     function handleResize() {
@@ -38,6 +37,10 @@ export default function App() {
       // Update the camera position if the ref is defined
       if (cameraRef.current) {
         cameraRef.current.position.set(3.2, 2.7, newZPosition);
+        console.log(
+          "Updated camera position:",
+          cameraRef.current.position.toArray(),
+        );
       }
 
       // Your existing logic for handling other resize-related changes
