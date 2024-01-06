@@ -29,7 +29,7 @@ export default function App() {
   useEffect(() => {
     // Handler to call on window resize
     function handleResize() {
-      const { innerWidth } = window;
+      const { innerWidth, innerHeight } = window;
 
       // Adjust the camera position based on screen size
       const distanceModifier = innerWidth < 768 ? 4 : 0; // Adjust this condition based on your design
