@@ -42,8 +42,8 @@
   width: 100vw;
   display: flex;
   justify-content: center; /* Change justify-content for large screens */
-  transform: translateX(-20.5%);
   align-items: center;
+  transform: translateX(-20.5%);
   overflow: hidden;
 }
 
