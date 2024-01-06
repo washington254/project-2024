@@ -25,6 +25,8 @@ export default function App() {
   const [device, setDevice] = useState("web");
   const [backVideoX, setBackVideoX] = useState(0);
 
+  const cameraRef = useRef();
+
   useEffect(() => {
     // Handler to call on window resize
     function handleResize() {
@@ -53,8 +55,6 @@ export default function App() {
     ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 
   let x;
-
-  const cameraRef = useRef();
 
   useEffect(() => {
     if (scrollData) {
