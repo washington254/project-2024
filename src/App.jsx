@@ -25,25 +25,23 @@ export default function App() {
   const [device, setDevice] = useState("web");
   const [backVideoX, setBackVideoX] = useState(0);
   const cameraRef = useRef();
-  useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      const { innerWidth, innerHeight } = window;
+  const handleResize = () => {
+    const { innerWidth, innerHeight } = window;
 
-      const distanceModifier = innerWidth < 768 ? 4 : 0; // Adjust this condition based on your design
-      const newZPosition = 4.5 + distanceModifier;
+    const distanceModifier = innerWidth < 768 ? 4 : 0; // Adjust this condition based on your design
+    const newZPosition = 4.5 + distanceModifier;
 
-      // Update the camera position if the ref is defined
-      if (cameraRef.current) {
-        cameraRef.current.position.set(3.2, 2.7, newZPosition);
-      }
-
-      // Your existing logic for handling other resize-related changes
-      setDevice(innerWidth > innerHeight ? "web" : "mobile");
-      console.log((960 - innerWidth / 2) * -1);
-      setBackVideoX(innerWidth > innerHeight ? 0 : (960 - innerWidth / 2) * -1);
+    // Update the camera position if the ref is defined
+    if (cameraRef.current) {
+      cameraRef.current.position.set(3.2, 2.7, newZPosition);
     }
 
+    // Your existing logic for handling other resize-related changes
+    setDevice(innerWidth > innerHeight ? "web" : "mobile");
+    console.log((960 - innerWidth / 2) * -1);
+    setBackVideoX(innerWidth > innerHeight ? 0 : (960 - innerWidth / 2) * -1);
+  };
+  useEffect(() => {
     // Add event listener for window resize
     window.addEventListener("resize", handleResize);
 
@@ -52,7 +50,7 @@ export default function App() {
 
     // Cleanup on component unmount
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, []); // Empty dependency array ensures this effect runs once on mount
 
   const mapNumRange = (num, inMin, inMax, outMin, outMax) =>
     ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
