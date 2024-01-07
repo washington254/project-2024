@@ -41,6 +41,8 @@ export default function App() {
     console.log((960 - innerWidth / 2) * -1);
     setBackVideoX(innerWidth > innerHeight ? 0 : (960 - innerWidth / 2) * -1);
   };
+  handleResize();
+
   useEffect(() => {
     // Add event listener for window resize
     window.addEventListener("resize", handleResize);
