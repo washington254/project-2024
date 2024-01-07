@@ -42,7 +42,7 @@ const Skills = (props) => {
   const { section, device } = props;
   return (
     <Section className="interface-part interface-skills">
-      <SkillsSvg section={section} device={device}></SkillsSvg>
+      <SkillsSvg section={section}></SkillsSvg>
     </Section>
   );
 };
