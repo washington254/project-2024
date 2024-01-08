@@ -38,7 +38,7 @@ body {
 
 #svgSkills {
   transform: scale(0.3);
-  transition: all 0.6s;
+  transition: all 0.5s;
 }
 #svgSkills.active {
   transform: scale(0.95);
