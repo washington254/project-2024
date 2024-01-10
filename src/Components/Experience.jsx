@@ -174,7 +174,7 @@ export function Experience(props) {
                 transition: { duration: 0.8 },
               },
               1: {
-                y: device === "web" ? -2.7 : 3.6,
+                y: device === "web" ? -2.7 : -3.6,
                 x: device === "web" ? 0.3 : 0.3,
                 z: 0,
                 scale: 1.2,
@@ -195,7 +195,7 @@ export function Experience(props) {
           </motion.group>
         </motion.group>
         {section === 0 ? null : (
-          <group position={[-0.3, device === "web" ? -1.2 : 1.2, 0.1]}>
+          <group position={[-0.3, device === "web" ? -1.2 : 1.3, 0.1]}>
             <Cloud count={4} radius={1} wordsArray={stockMarketWords} />
           </group>
         )}
