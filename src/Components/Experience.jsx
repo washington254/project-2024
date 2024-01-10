@@ -174,7 +174,7 @@ export function Experience(props) {
                 transition: { duration: 0.8 },
               },
               1: {
-                y: device === "web" ? -2.7 : 4,
+                y: device === "web" ? -2.7 : -4,
                 x: device === "web" ? 0.3 : 0.3,
                 z: 0,
                 scale: 1.2,
