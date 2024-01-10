@@ -9,18 +9,17 @@
   /* background-color: #ecdcd0; */
 }
 
+
+
+
 .skillsPage {
   width: 100vw;
   height: 105vh;
   position: absolute;
   top: 100vh;
-  background: linear-gradient(
-    0deg,
-    rgb(52, 47, 133) 0%,
-    rgb(25, 25, 107) 51%,
-    rgb(9, 21, 75) 100%
-  );
+  background: linear-gradient(0deg, rgb(52, 47, 133) 0%, rgb(25, 25, 107) 51%, rgb(9, 21, 75) 100%);
   overflow: hidden;
+
 }
 
 .scrollContainer {
@@ -29,11 +28,15 @@
   background-color: rgb(201, 204, 50);
 }
 
+
+
+
 .interface {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  padding: 10px 4%;
 }
 
 .interfaceSection {
@@ -41,17 +44,55 @@
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center; /* Change justify-content for large screens */
   align-items: center;
-  transform: translateX(-20.5%);
+  transform: translateX(-24%);
   overflow: hidden;
 }
+.ctas{
+  text-align: left !important;
+}
+h1{
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+h3{
+  font-size: 1.3rem;
+}
+a{
+  padding: 10px 20px; /* Adjust padding to your preference */
+  background-color: #f87c1d; /* Set background color */
+  color: #ffffff; /* Set text color */
+  text-decoration: none;
+  font-size: 16px; /* Adjust font size to your preference */
+  font-weight: bold;
+  border-radius: 25px; /* Add rounded corners for a button-like appearance */
+  transition: background-color 0.3s ease; /* Smooth transition effect on hover */
+  margin-top: 0.3rem;
+}
 
+a:hover {
+  background-color: #e78b45; /* Change background color on hover */
+}
+
+
+.interfaceSection2 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.svgsection{
+  margin-right: 10%;
+}
 @media screen and (max-width: 500px) {
   .interfaceSection {
     justify-content: flex-start; /* Default justify-content for small screens */
-    transform: translateX(0%);
-    text-align: center; /* Remove translation for all screens */
+    transform: translateX(0%) translateY(14%);
   }
 }
 

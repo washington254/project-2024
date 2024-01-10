@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../app.module.css";
 import { motion } from "framer-motion";
 import { SkillsSvg } from "./SkillsSvg";
+import FadeIn from "./FadeIn";
 
 const Section = (props) => {
   const { children, backgroundColor, className } = props;
@@ -9,7 +10,7 @@ const Section = (props) => {
   return (
     <>
       <section
-        className={`${styles.interfaceSection} ${className}`}
+        className={`${className}`}
         style={{ backgroundColor }}
       >
         {children}
@@ -23,7 +24,7 @@ export function Interface(props) {
   return (
     <div className={`${styles.interface} interface`}>
       <AboutSection />
-      <Skills section={section} device={device} />
+      <Skills section={section} />
       <Courses />
       <Contact />
     </div>
@@ -32,8 +33,13 @@ export function Interface(props) {
 
 const AboutSection = () => {
   return (
-    <Section className="interface-part interface-welcome">
-      <h1>Welcome to GWWM educations</h1>
+    <Section className={`${styles.interfaceSection}  interface-part interface-welcome`}>
+      <div className="ctas">
+      <h1 className="main-text">Hi, Traders <br/> Welcome to Goodwill Education </h1> 
+      <h3>Learn and earn from our online course</h3>
+      <a href="#" className="cta-btn">Get in touch</a>
+    
+      </div>
     </Section>
   );
 };
@@ -41,16 +47,16 @@ const AboutSection = () => {
 const Skills = (props) => {
   const { section, device } = props;
   return (
-    <Section className="interface-part interface-skills">
-      <SkillsSvg section={section}></SkillsSvg>
+    <Section className={`${styles.interfaceSection2} interface-part interface-skills`}>
+      <SkillsSvg  section={section} className={`${styles.svgsection}`}></SkillsSvg>
     </Section>
   );
 };
 
 const Courses = () => {
   return (
-    <Section backgroundColor="rgb(255, 204, 153)">
-      <h1>Courses</h1>
+    <Section>
+      <h1></h1>
     </Section>
   );
 };
@@ -58,7 +64,7 @@ const Courses = () => {
 const Contact = () => {
   return (
     <Section>
-      <h1>Contact</h1>
+      <h1></h1>
     </Section>
   );
 };

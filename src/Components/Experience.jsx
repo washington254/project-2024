@@ -3,7 +3,7 @@ import { Environment } from "@react-three/drei";
 
 import { motion } from "framer-motion-3d";
 import { extend, useFrame, useThree } from "@react-three/fiber";
-import { Box } from "@react-three/drei";
+import { Box, Center } from "@react-three/drei";
 import { Cone, Icosahedron, Text } from "@react-three/drei";
 import {
   Box3,
@@ -18,11 +18,12 @@ import { useMemo, useRef } from "react";
 import { BackGroundModel_3 } from "./BackGroundModel_3";
 
 import { CharacterModel_2 } from "./CharacterModel_2";
+import FadeIn from "./FadeIn";
 
 function Word({ children, ...props }) {
   const color = new Color();
   const fontProps = {
-    font: "/Inter-Bold.woff",
+    font: '/Philosopher-Regular.ttf',
     fontSize: 0.1,
     letterSpacing: -0.05,
     lineHeight: 1,
@@ -46,7 +47,7 @@ function Word({ children, ...props }) {
   );
 }
 
-function Cloud({ count = 4, radius = 20, wordsArray }) {
+function Cloud({ count = 4, radius = 15, wordsArray }) {
   const cloudRef = useRef();
 
   const words = useMemo(() => {
@@ -120,6 +121,7 @@ export function Experience(props) {
     "ask",
   ];
   const characterModelRef = useRef();
+  const cloudsRef = useRef();
 
   // useFrame(() => {
   //   console.log(cameraRef.current.position)
@@ -127,7 +129,9 @@ export function Experience(props) {
 
   return (
     <>
-      <group
+    
+    
+     <group
         position={[device === "web" ? 0 : -1.2, device === "web" ? 0 : -0.5, 0]}
         scale={device === "web" ? [1, 1, 1] : [0.7, 0.7, 0.7]}
       >
@@ -172,9 +176,10 @@ export function Experience(props) {
                 transition: { duration: 0.8 },
               },
               1: {
-                y: -viewport.height / 1.1,
-                x: 0,
+                y: device === "web" ?  -2.7 :  -viewport.height / 2.1,
+                x: device === "web" ?  .3 :   .3,
                 z: 0,
+                scale: 1.2,
                 rotateX: 0,
                 rotateY: -1,
                 rotateZ: 0,
@@ -191,10 +196,11 @@ export function Experience(props) {
             ></CharacterModel_2>
           </motion.group>
         </motion.group>
-        <group position={[-0.3, -viewport.height / 2.2, 0.1]}>
-          <Cloud count={4} radius={1} wordsArray={stockMarketWords} />
-        </group>
-
+                 {section === 0 ? null :
+                 <group position={[-0.2, device === "web" ? -1.2 : .2, 0.1]}>
+                  <Cloud count={4} radius={1} wordsArray={stockMarketWords} />
+                </group>}
+                
         <Environment files="hall.hdr"></Environment>
       </group>
     </>
