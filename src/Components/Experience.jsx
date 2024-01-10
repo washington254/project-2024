@@ -23,7 +23,7 @@ import FadeIn from "./FadeIn";
 function Word({ children, ...props }) {
   const color = new Color();
   const fontProps = {
-    font: '/Philosopher-Regular.ttf',
+    font: "/Philosopher-Regular.ttf",
     fontSize: 0.1,
     letterSpacing: -0.05,
     lineHeight: 1,
@@ -129,9 +129,7 @@ export function Experience(props) {
 
   return (
     <>
-    
-    
-     <group
+      <group
         position={[device === "web" ? 0 : -1.2, device === "web" ? 0 : -0.5, 0]}
         scale={device === "web" ? [1, 1, 1] : [0.7, 0.7, 0.7]}
       >
@@ -176,8 +174,8 @@ export function Experience(props) {
                 transition: { duration: 0.8 },
               },
               1: {
-                y: device === "web" ?  -2.7 :  -viewport.height / 2.1,
-                x: device === "web" ?  .3 :   .3,
+                y: device === "web" ? -2.7 : 2,
+                x: device === "web" ? 0.3 : 0.3,
                 z: 0,
                 scale: 1.2,
                 rotateX: 0,
@@ -196,11 +194,12 @@ export function Experience(props) {
             ></CharacterModel_2>
           </motion.group>
         </motion.group>
-                 {section === 0 ? null :
-                 <group position={[-0.2, device === "web" ? -1.2 : .2, 0.1]}>
-                  <Cloud count={4} radius={1} wordsArray={stockMarketWords} />
-                </group>}
-                
+        {section === 0 ? null : (
+          <group position={[-0.2, device === "web" ? -1.2 : 0.2, 0.1]}>
+            <Cloud count={4} radius={1} wordsArray={stockMarketWords} />
+          </group>
+        )}
+
         <Environment files="hall.hdr"></Environment>
       </group>
     </>
