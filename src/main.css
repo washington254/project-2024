@@ -25,7 +25,7 @@ body {
 
 .mobile .interface .interface-part.interface-welcome {
   height: 50vh;
-  margin-bottom: 50vh;
+  /* margin-bottom: 50vh; */
 }
 
 .mobile .interface .interface-part.interface-skills {
