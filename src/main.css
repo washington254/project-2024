@@ -1,17 +1,19 @@
 @font-face {
-  font-family: "Philosopher-Regular";
-  src: url("/Philosopher-Regular.ttf") format("truetype");
+  font-family: 'Philosopher-Regular';
+  src: url('/Philosopher-Regular.ttf') format('truetype');
 }
+
 
 #root {
   width: 100vw;
   height: 100vh;
   background-color: #ecdcd0;
-  font-family: "Philosopher-Regular", sans-serif;
+  font-family: 'Philosopher-Regular', sans-serif;
 }
 
 body {
   margin: 0;
+  
 }
 
 .fixScroll {
@@ -36,26 +38,30 @@ body {
   width: 586px;
   height: auto;
   transform: translateX(-80%) !important;
-  scale: 0.6;
+  scale: .6;
   margin-right: 6%;
 }
-@media (min-width: 1600px) {
-  .web #svgSkills {
-    transform: translateX(-82%) !important;
-    scale: 0.65;
-  }
+@media (min-width: 1600px){
+  
+.web #svgSkills {
+  transform: translateX(-82%) !important;
+  scale: .65;
 }
-@media (min-width: 1800px) {
+
+}
+@media (min-width: 1800px){
+  
   .web #svgSkills {
     transform: translateX(-84%) !important;
-    scale: 0.68;
+    scale: .68;
   }
-}
-@media (min-width: 2000px) {
-  .web #svgSkills {
-    transform: translateX(-86%) !important;
-    scale: 0.72;
-  }
+  
+ }
+@media (min-width: 2000px){
+    .web #svgSkills {
+      transform: translateX(-86%) !important;
+      scale: .72;
+    }   
 }
 .mobile #svgSkills {
   width: 100vw;
@@ -70,3 +76,5 @@ body {
 #svgSkills.active {
   transform: scale(0.7);
 }
+
+
