@@ -27,6 +27,7 @@ body {
 
 .mobile .interface .interface-part.interface-welcome {
   height: 50vh;
+  flex-wrap: wrap;
   /* margin-bottom: 50vh; */
 }
 
