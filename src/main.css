@@ -20,9 +20,9 @@ body {
   position: absolute;
   top: 0;
 }
-
-/* .mobile .back-video {
-  transform: translateX();
+/* 
+.mobile .back-video {
+  
 } */
 
 .mobile .interface .interface-part.interface-welcome {
@@ -60,8 +60,8 @@ body {
  }
 @media (min-width: 2000px){
     .web #svgSkills {
-      transform: translateX(-86%) !important;
-      scale: .72;
+      transform: translateX(-90%) !important;
+      scale: .9;
     }   
 }
 .mobile #svgSkills {
@@ -76,6 +76,9 @@ body {
 }
 #svgSkills.active {
   transform: scale(0.7);
+}
+.mobile .back-video{
+  transform: translateX(-55%);
 }
 
 

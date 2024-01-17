@@ -9,7 +9,7 @@ import { Color, MeshBasicMaterial, MeshStandardMaterial, SRGBColorSpace } from "
 import { motion } from "framer-motion-3d";
 export function BackGroundModel_3(props) {
 
-  const {section} = props;
+  const {section, device} = props;
 
   const { nodes, materials } = useGLTF("/Scene_1_model_v04.glb");
   const texture1 = useVideoTexture("/cancle_stick_animation_lowRes.mp4");
@@ -28,15 +28,17 @@ export function BackGroundModel_3(props) {
 
 
   const groupRef = useRef();
+  const topScl = device==='web'?1:0.9;
 
   return (
     <group {...props} dispose={null} ref={groupRef}>
       <mesh
-
+        position={[device==='web'?0:-0.2, device==='web'?0:0.03, 0]}
+        scale={[topScl, topScl, topScl]}
         geometry={nodes.wall_horizontal.geometry}
         material={wallMaterial}
       />
-      <group position={[-0.577, 0.478, 0.476]}>
+      <group position={[device==='web'?-0.577:-0.677, 0.478, 0.476]} scale={[topScl, topScl, topScl]}>
         <mesh
 
           geometry={nodes.Circle003.geometry}

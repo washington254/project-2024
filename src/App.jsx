@@ -24,7 +24,7 @@ export default function App() {
   const [scrollData, setScrollData] = useState(0);
 
   const [device, setDevice] = useState("web");
-  const [backVideoX, setBackVideoX] = useState(0);
+  // const [backVideoX, setBackVideoX] = useState(0);
   const cameraRef = useRef();
 
 
@@ -51,19 +51,16 @@ export default function App() {
 
   return (
     <main className={`${styles.main} ${device}`}>
-      <div className={styles.skillsPage} ref={skillsPageBackgroundRef}>
-        <video
-          className="back-video"
-          autoPlay
-          muted
-          loop
-          style={{ transform: `translateX(${backVideoX}px)` }}
-        >
-          <source
-            src="/stock-market-2023-11-27-05-36-31-utc_compressed.mp4"
-            type="video/mp4"
-          />
+     <div className={styles.skillsPage} ref={skillsPageBackgroundRef}>
+        <video className="back-video" autoPlay muted loop style={{
+          width:device==='web'?'100%':'auto',
+          height:'100%',
+          // transform:`translateX(${backVideoX}px)`
+        }}>
+          <source src="/bACKGROUND.mp4" type="video/mp4"/>
+          {/* stock-market-2023-11-27-05-36-31-utc_compressed */}
         </video>
+
       </div>
       <Canvas>
         <PerspectiveCamera
@@ -72,9 +69,10 @@ export default function App() {
           fov={25} // Field of view
           near={0.1}
           far={1000}
+          
           ref={cameraRef}
         />
-         <HandleResize cameraRef={cameraRef} setDevice={setDevice} setBackVideoX={setBackVideoX} />
+         <HandleResize cameraRef={cameraRef} setDevice={setDevice}  />
 
         {/* <OrbitControls enableZoom={false} /> */}
 
