@@ -76,37 +76,6 @@ export function Experience(props) {
   const { viewport } = useThree();
   const { section } = props;
   const stockMarketWords = [
-    // "stock",
-    // "market",
-    // "trading",
-    // "investing",
-    // "portfolio",
-    // "equity",
-    // "shares",
-    // "dividend",
-    // "bullish",
-    // "bearish",
-    // "index",
-    // "exchange",
-    // "broker",
-    // "Futures",
-    // "Options",
-    // "blue chip",
-    // "volatility",
-    // "risk",
-    // "return",
-    // "fundamental",
-    // "technical analysis",
-    // "margin",
-    // "liquidity",
-    // "asset",
-    // "allocation",
-    // "capital",
-    // "price-to-earnings",
-    // "earnings per share",
-    // "market cap",
-    // "bid",
-    // "ask",
     "Stock Trading",
     "Investing",
     "Technical Analysis",
@@ -132,7 +101,7 @@ export function Experience(props) {
 
   return (
     <>
-      <group  position={[ device==='web'?0:-1.2, device==='web'?0:-0.5, 0]} scale={device==='web'?[1, 1, 1]:[0.7, 0.7, 0.7]}>
+      <group  position={[ device==='web'?0:-1.2, device==='web'?0:-0.5, 0]} scale={device==='web'?[1, 1, 1]:[0.8, 0.8, 0.8]}>
       <BackGroundModel_3 section={section} device={device} />
 
       <motion.group
