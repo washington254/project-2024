@@ -1,4 +1,4 @@
-import { useScroll } from "@react-three/drei";
+[import { useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
 
@@ -21,22 +21,29 @@ export const ScrollManager = (props) => {
  
 
   useEffect(() => {
-    if (data.el) {
-      anime({
-        targets: data.el,
-        scrollTop: section * data.el.clientHeight,
-        duration: 1000,
-        delay: setDelay.current,
-        begin: () => {
-          isAnimating.current = true;
-        },
-        complete: () => {
-          isAnimating.current = false;
-        },
-      });
-    }
-  }, [section, data.el]);
-  
+    // if (section === 0) {
+    //   console.log(section);
+    // }
+
+
+    anime({
+      targets: data.el,
+      scrollTop: section * data.el.clientHeight,
+      duration: 1000,
+      delay: setDelay.current,
+      begin: () => {
+        isAnimating.current = true;
+
+      },
+      complete: () => {
+        isAnimating.current = false;
+      },
+    });
+  }, [section]);
+
+
+
+
 
   useFrame(() => {
     setScrollOffset(data.offset);
@@ -63,4 +70,3 @@ export const ScrollManager = (props) => {
 
   return null;
 };
-
