@@ -33,22 +33,13 @@ export default function App() {
   let x;
 
   useEffect(() => {
-    if (scrollData) {
-      x = mapNumRange(
-        scrollOffset,
-        0,
-        1 / (scrollData.pages - 1),
-        0,
-        scrollData.el.clientHeight,
-      );
-      // console.log(scrollData.offset)
+    if (scrollData && scrollData.el) {
+      const landingPage = skillsPageBackgroundRef.current;
+      const newY =
+        -scrollOffset * (scrollData.el.clientHeight / (scrollData.pages - 1));
+      landingPage.style.transform = `translateY(${newY}px)`;
     }
-    const landingPage = skillsPageBackgroundRef.current;
-    const newY =
-      -scrollOffset * (scrollData.el.clientHeight / (scrollData.pages - 1));
-    landingPage.style.transform = `translateY(${newY}px)`;
-  }, [scrollOffset]);
-
+  }, [scrollOffset, scrollData]);
   return (
     <main className={`${styles.main} ${device}`}>
       <div className={styles.skillsPage} ref={skillsPageBackgroundRef}>
