@@ -21,35 +21,27 @@ export const ScrollManager = (props) => {
  
 
   useEffect(() => {
-    // if (section === 0) {
-    //   console.log(section);
-    // }
-
-
-    anime({
-      targets: data.el,
-      scrollTop: section * data.el.clientHeight,
-      duration: 1000,
-      delay: setDelay.current,
-      begin: () => {
-        isAnimating.current = true;
-
-      },
-      complete: () => {
-        isAnimating.current = false;
-      },
-    });
-  }, [section]);
-
-
-
-
+    if (data.el) {
+      anime({
+        targets: data.el,
+        scrollTop: section * data.el.clientHeight,
+        duration: 1000,
+        delay: setDelay.current,
+        begin: () => {
+          isAnimating.current = true;
+        },
+        complete: () => {
+          isAnimating.current = false;
+        },
+      });
+    }
+  }, [section, data.el]);
+  
 
   useFrame(() => {
     setScrollOffset(data.offset);
     if (isAnimating.current) {
       lastScroll.current = data.scroll.current;
-
       return;
     }
     // console.log(data.offset,data.scroll.current)
@@ -70,3 +62,4 @@ export const ScrollManager = (props) => {
 
   return null;
 };
+

@@ -74,6 +74,7 @@ function Cloud({ count = 4, radius = 20, wordsArray }) {
 export function Experience(props) {
   const { cameraRef, device } = props;
   const { viewport } = useThree();
+  // console.log(viewport.height)
   const { section } = props;
   const stockMarketWords = [
     "Stock Trading",
@@ -102,7 +103,8 @@ export function Experience(props) {
   return (
     <>
       <group  position={[ device==='web'?0:-1.2, device==='web'?0:-0.5, 0]} scale={device==='web'?[1, 1, 1]:[0.8, 0.8, 0.8]}>
-      <BackGroundModel_3 section={section} device={device} />
+      
+      {  <BackGroundModel_3 section={section} device={device} /> }
 
       <motion.group
       //Floating Animation
@@ -138,7 +140,7 @@ export function Experience(props) {
               transition: { duration: 0.8 }
             },
             1: {
-              y: device === "web" ?  -viewport.height / 1.2 :  -viewport.height / 1.5,
+              y: device === "web" ?  -viewport.height / 1.2 :  -viewport.height / 1.7 ,
               x: device === "web" ?  .3 :   .3,
               z: 0,
               rotateX: 0,
@@ -155,7 +157,7 @@ export function Experience(props) {
         </motion.group>
       </motion.group>
       {section === 0 ? null :
-                 <group  position={[-0.2, device === "web" ? -1.2 : -1.6, -0.1]}>
+                 <group  position={[-0.2, device === "web" ? -1.2 : -viewport.height / 3.1, -0.1]}>
                   <Cloud count={4} radius={1} wordsArray={stockMarketWords} />
                 </group>}
 
