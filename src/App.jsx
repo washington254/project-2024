@@ -27,40 +27,34 @@ export default function App() {
   // const [backVideoX, setBackVideoX] = useState(0);
   const cameraRef = useRef();
 
-
-
   const mapNumRange = (num, inMin, inMax, outMin, outMax) =>
     ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 
   let x;
 
   useEffect(() => {
-    if (scrollData) {
-      x = mapNumRange(
-        scrollOffset,
-        0,
-        1 / (scrollData.pages - 1),
-        0,
-        scrollData.el.clientHeight,
-      );
-      // console.log(scrollData.offset)
-    }
     const landingPage = skillsPageBackgroundRef.current;
-    landingPage.style.transform = `translateY(-${x}px)`;
-  }, [scrollOffset]);
-
+    const newY =
+      -scrollOffset * (scrollData.el.clientHeight / (scrollData.pages - 1));
+    landingPage.style.transform = `translateY(${newY}px)`;
+  }, [scrollOffset, scrollData]);
   return (
     <main className={`${styles.main} ${device}`}>
-     <div className={styles.skillsPage} ref={skillsPageBackgroundRef}>
-        <video className="back-video" autoPlay muted loop style={{
-          width:device==='web'?'100%':'auto',
-          height:'100%',
-          // transform:`translateX(${backVideoX}px)`
-        }}>
-          <source src="/bACKGROUND.mp4" type="video/mp4"/>
+      <div className={styles.skillsPage} ref={skillsPageBackgroundRef}>
+        <video
+          className="back-video"
+          autoPlay
+          muted
+          loop
+          style={{
+            width: device === "web" ? "100%" : "auto",
+            height: "100%",
+            // transform:`translateX(${backVideoX}px)`
+          }}
+        >
+          <source src="/bACKGROUND.mp4" type="video/mp4" />
           {/* stock-market-2023-11-27-05-36-31-utc_compressed */}
         </video>
-
       </div>
       <Canvas>
         <PerspectiveCamera
@@ -69,10 +63,9 @@ export default function App() {
           fov={25} // Field of view
           near={0.1}
           far={1000}
-          
           ref={cameraRef}
         />
-         <HandleResize cameraRef={cameraRef} setDevice={setDevice}  />
+        <HandleResize cameraRef={cameraRef} setDevice={setDevice} />
 
         {/* <OrbitControls enableZoom={false} /> */}
 
