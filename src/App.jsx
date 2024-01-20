@@ -30,12 +30,25 @@ export default function App() {
   const mapNumRange = (num, inMin, inMax, outMin, outMax) =>
     ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 
+  let x;
+
   useEffect(() => {
+    if (scrollData) {
+      x = mapNumRange(
+        scrollOffset,
+        0,
+        1 / (scrollData.pages - 1),
+        0,
+        scrollData.el.clientHeight,
+      );
+      // console.log(scrollData.offset)
+    }
     const landingPage = skillsPageBackgroundRef.current;
     const newY =
       -scrollOffset * (scrollData.el.clientHeight / (scrollData.pages - 1));
     landingPage.style.transform = `translateY(${newY}px)`;
-  }, [scrollOffset, scrollData]);
+  }, [scrollOffset]);
+
   return (
     <main className={`${styles.main} ${device}`}>
       <div className={styles.skillsPage} ref={skillsPageBackgroundRef}>
