@@ -21,7 +21,7 @@ export default function App() {
 
   const [scrollOffset, setScrollOffset] = useState(0);
 
-  const [scrollData, setScrollData] = useState(0);
+  const [scrollData, setScrollData] = useState({});
 
   const [device, setDevice] = useState("web");
   // const [backVideoX, setBackVideoX] = useState(0);
@@ -33,19 +33,18 @@ export default function App() {
   let x;
 
   useEffect(() => {
-    if (scrollData) {
-      x = mapNumRange(
+    if (scrollOffset && scrollData.el) {
+      const landingPage = skillsPageBackgroundRef.current;
+      const newY = mapNumRange(
         scrollOffset,
         0,
         1 / (scrollData.pages - 1),
         0,
         scrollData.el.clientHeight,
       );
-      // console.log(scrollData.offset)
+      landingPage.style.transform = `translateY(-${newY}px)`;
     }
-    const landingPage = skillsPageBackgroundRef.current;
-    landingPage.style.transform = `translateY(-${x}px)`;
-  }, [scrollOffset]);
+  }, [scrollOffset, scrollData]);
 
   return (
     <main className={`${styles.main} ${device}`}>
