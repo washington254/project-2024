@@ -10,8 +10,10 @@
   background-color: #ecdcd0;
   font-family: 'Philosopher-Regular', sans-serif;
 }
+@media(max-screen: 700px){
 section{
-  padding: 1% 2%;
+  padding: 1% 5%;
+}
 }
 
 body {
