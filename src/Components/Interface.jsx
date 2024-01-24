@@ -73,37 +73,30 @@ const Contact = () => {
     <Section>
       <h2 className="heading-contact">Contact me</h2>
       <div className="contact-form">
-        {state.succeeded ? (
-          <p className="message">Thanks for your message!</p>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="name" className="label">
-              Name
-            </label>
-            <input type="text" name="name" id="name" className="input" />
-            <label htmlFor="email" className="label">
-              Email
-            </label>
-            <input type="email" name="email" id="email" className="input" />
-            <ValidationError
-              className="validation-error"
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
-            <label htmlFor="message" className="label">
-              Message
-            </label>
-            <textarea name="message" id="message" className="textarea" />
-            <ValidationError
-              className="validation-error"
-              errors={state.errors}
-            />
-            <button disabled={state.submitting} className="submit-button">
-              Submit
-            </button>
-          </form>
-        )}
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name" className="label">
+            Name
+          </label>
+          <input type="text" name="name" id="name" className="input" />
+          <label htmlFor="email" className="label">
+            Email
+          </label>
+          <input type="email" name="email" id="email" className="input" />
+          <ValidationError
+            className="validation-error"
+            prefix="Email"
+            field="email"
+            errors={state.errors}
+          />
+          <label htmlFor="message" className="label">
+            Message
+          </label>
+          <textarea name="message" id="message" className="textarea" />
+          <ValidationError className="validation-error" errors={state.errors} />
+          <button disabled={state.submitting} className="submit-button">
+            Submit
+          </button>
+        </form>
       </div>
     </Section>
   );
