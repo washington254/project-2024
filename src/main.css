@@ -88,7 +88,7 @@ body {
 }
 
 .contact-form {
-  margin-top: 200vh;
+  transform: translateY(70%);
   padding: 2rem;
   border-radius: 0.25rem;
   background-color: rgba(255, 255, 255, 0.5);
