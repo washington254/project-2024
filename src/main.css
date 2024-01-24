@@ -166,7 +166,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .carousel .carouselItem {
