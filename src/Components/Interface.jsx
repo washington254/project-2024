@@ -49,12 +49,6 @@ const Carousel = () => {
       description: "Description for Item 5",
       cta: "Action Button 5",
     },
-    {
-      image: "https://via.placeholder.com/200",
-      title: "Item 6",
-      description: "Description for Item 6",
-      cta: "Action Button 6",
-    },
   ];
 
   const handlePrevious = () => {
