@@ -221,9 +221,14 @@ body {
 
 .previousButton,
 .nextButton {
-  background-color: #4f46e5;
+  background-color: #f57310;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   margin: 0 0.25rem;
+}
+.previousButton:hover,
+.nextButton:hover {
+  cursor: pointer;
+  background-color: #f5731085;
 }
