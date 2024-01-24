@@ -70,7 +70,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className={"carousel"}>
+    <Section className={"carousel"}>
       <div className={"itemContainer"}>
         {carouselItems.map((item, index) => (
           <div
@@ -98,7 +98,7 @@ const Carousel = () => {
           &gt;
         </button>
       </div>
-    </div>
+    </Section>
   );
 };
 
@@ -147,11 +147,7 @@ const Skills = (props) => {
 };
 
 const Courses = () => {
-  return (
-    <Section>
-      <Carousel />
-    </Section>
-  );
+  return <Carousel />;
 };
 
 const Contact = () => {
