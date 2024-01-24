@@ -174,15 +174,9 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.carouselItem.active {
-  opacity: 1;
 }
 
 .carousel .itemContainer .itemImage {
@@ -226,6 +220,8 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   margin: 0 0.25rem;
+  outline: none;
+  border: none;
 }
 .previousButton:hover,
 .nextButton:hover {

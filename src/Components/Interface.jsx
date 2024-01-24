@@ -73,12 +73,7 @@ const Carousel = () => {
     <Section className={"carousel"}>
       <div className={"itemContainer"}>
         {carouselItems.map((item, index) => (
-          <div
-            key={index}
-            className={`${"carouselItem"} ${
-              index === currentItemIndex ? styles.active : ""
-            }`}
-          >
+          <div key={index} className={`${"carouselItem"}`}>
             <img
               src={item.image}
               alt={`Item ${index + 1}`}
