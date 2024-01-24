@@ -162,16 +162,16 @@ body {
 }
 
 .carousel .itemContainer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: grid;
   width: 100%;
-  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
 }
 
 .carousel .carouselItem {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.34rem;
   gap: 0.25rem;
 }
