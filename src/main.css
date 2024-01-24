@@ -160,7 +160,7 @@ body {
   align-items: center;
 }
 
-.itemContainer {
+.carousel .itemContainer {
   display: flex;
   justify-content: center;
   position: relative;
@@ -168,7 +168,7 @@ body {
   overflow: hidden;
 }
 
-.carouselItem {
+.carousel .carouselItem {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,7 +185,7 @@ body {
   opacity: 1;
 }
 
-.itemImage {
+.carousel .itemContainer .itemImage {
   width: 100%;
   max-width: 300px;
   height: auto;
@@ -201,7 +201,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.actionButton {
+.carousel .itemContainer .actionButton {
   background-color: #f57310;
   color: white;
   padding: 0.5rem 1rem;
