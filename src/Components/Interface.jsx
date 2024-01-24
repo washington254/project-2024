@@ -71,8 +71,8 @@ const Courses = () => {
 const Contact = () => {
   return (
     <Section>
-      <h2 className="heading">Contact me</h2>
-      <div className="container">
+      <h2 className="heading-contact">Contact me</h2>
+      <div className="contact-form">
         {state.succeeded ? (
           <p className="message">Thanks for your message!</p>
         ) : (
