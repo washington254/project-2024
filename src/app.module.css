@@ -71,6 +71,11 @@
 
 .navbar {
   transform: translateY(-2%);
+  display: flex;
+  justify-content: space-between;
+}
+.navbar img {
+  max-width: 10px;
 }
 
 .ctas {
