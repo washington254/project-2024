@@ -82,11 +82,10 @@ body {
 
 /* styles.css */
 .contact-container {
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .heading-contact {
@@ -145,10 +144,12 @@ body {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   outline: none;
+  border: none;
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 2rem;
 }
 .submit-button:hover {
   cursor: pointer;
+  background-color: #f5731085;
 }
