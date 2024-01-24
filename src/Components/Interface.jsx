@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../app.module.css";
 import { motion } from "framer-motion";
 import { SkillsSvg } from "./SkillsSvg";
-import FadeIn from "./FadeIn";
 import { useState } from "react";
 
 const Section = (props) => {
