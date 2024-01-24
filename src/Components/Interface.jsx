@@ -73,7 +73,7 @@ const Contact = () => {
     <Section>
       <h2 className="heading-contact">Contact me</h2>
       <div className="contact-form">
-        <form onSubmit={handleSubmit}>
+        <form>
           <label htmlFor="name" className="label">
             Name
           </label>
@@ -82,20 +82,12 @@ const Contact = () => {
             Email
           </label>
           <input type="email" name="email" id="email" className="input" />
-          <ValidationError
-            className="validation-error"
-            prefix="Email"
-            field="email"
-            errors={state.errors}
-          />
+
           <label htmlFor="message" className="label">
             Message
           </label>
           <textarea name="message" id="message" className="textarea" />
-          <ValidationError className="validation-error" errors={state.errors} />
-          <button disabled={state.submitting} className="submit-button">
-            Submit
-          </button>
+          <button className="submit-button">Submit</button>
         </form>
       </div>
     </Section>
