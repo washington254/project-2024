@@ -62,7 +62,11 @@ const Skills = (props) => {
 };
 
 const Courses = () => {
-  return <Carousel />;
+  return (
+    <Section>
+      <Carousel />
+    </Section>
+  );
 };
 
 const Contact = () => {
