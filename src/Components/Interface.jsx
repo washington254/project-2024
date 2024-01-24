@@ -3,6 +3,7 @@ import styles from "../app.module.css";
 import { motion } from "framer-motion";
 import { SkillsSvg } from "./SkillsSvg";
 import FadeIn from "./FadeIn";
+import Carousel from "./Carousel";
 
 const Section = (props) => {
   const { children, backgroundColor, className } = props;
@@ -61,11 +62,7 @@ const Skills = (props) => {
 };
 
 const Courses = () => {
-  return (
-    <Section>
-      <h1></h1>
-    </Section>
-  );
+  return <Carousel />;
 };
 
 const Contact = () => {
