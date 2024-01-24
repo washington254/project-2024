@@ -78,6 +78,11 @@ const Contact = () => {
             Name
           </label>
           <input type="text" name="name" id="name" className="input" />
+          <label htmlFor="number" className="label">
+            Phone Number
+          </label>
+          <input type="number" name="number" id="number" className="input" />
+
           <label htmlFor="email" className="label">
             Email
           </label>
