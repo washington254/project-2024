@@ -161,11 +161,10 @@ body {
 }
 
 .carousel .itemContainer {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   position: relative;
   max-width: 100%;
-  overflow: hidden;
 }
 
 .carousel .carouselItem {
