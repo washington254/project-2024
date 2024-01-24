@@ -109,6 +109,12 @@ const AboutSection = () => {
       className={`${styles.interfaceSection}  interface-part interface-welcome`}
     >
       <div className="ctas">
+        <div className="navbar">
+          <img src="./logo.svg" alt="logo" />
+          <a href="#" className="cta-btn">
+            Get in touch
+          </a>
+        </div>
         <h1 className="main-text">
           Hi, Traders <br /> Welcome to Goodwill Education{" "}
         </h1>
