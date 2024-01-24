@@ -81,6 +81,9 @@ body {
 }
 
 /* styles.css */
+.contact-container {
+  transform: translateY(200vh);
+}
 
 .heading-contact {
   font-size: 3rem;
@@ -88,7 +91,7 @@ body {
 }
 
 .contact-form {
-  transform: translateY(70%);
+  margin-top: 2%;
   padding: 2rem;
   border-radius: 0.25rem;
   background-color: rgba(255, 255, 255, 0.5);

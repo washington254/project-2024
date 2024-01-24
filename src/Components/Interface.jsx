@@ -70,7 +70,7 @@ const Courses = () => {
 
 const Contact = () => {
   return (
-    <Section>
+    <Section className="contact-container">
       <h2 className="heading-contact">Contact me</h2>
       <div className="contact-form">
         <form>
