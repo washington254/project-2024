@@ -164,7 +164,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.25rem;
-  position: relative;
 }
 
 .carousel .carouselItem {
