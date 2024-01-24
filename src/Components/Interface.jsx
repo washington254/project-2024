@@ -20,37 +20,37 @@ const Carousel = () => {
 
   const carouselItems = [
     {
-      image: "https://via.placeholder.com/300",
+      image: "https://via.placeholder.com/200",
       title: "Item 1",
       description: "Description for Item 1",
       cta: "Action Button 1",
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: "https://via.placeholder.com/200",
       title: "Item 2",
       description: "Description for Item 2",
       cta: "Action Button 2",
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: "https://via.placeholder.com/200",
       title: "Item 3",
       description: "Description for Item 3",
       cta: "Action Button 3",
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: "https://via.placeholder.com/200",
       title: "Item 4",
       description: "Description for Item 4",
       cta: "Action Button 4",
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: "https://via.placeholder.com/200",
       title: "Item 5",
       description: "Description for Item 5",
       cta: "Action Button 5",
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: "https://via.placeholder.com/200",
       title: "Item 6",
       description: "Description for Item 6",
       cta: "Action Button 6",
