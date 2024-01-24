@@ -3,7 +3,6 @@ import styles from "../app.module.css";
 import { motion } from "framer-motion";
 import { SkillsSvg } from "./SkillsSvg";
 import FadeIn from "./FadeIn";
-import Carousel from "./Carousel";
 
 const Section = (props) => {
   const { children, backgroundColor, className } = props;
@@ -14,6 +13,92 @@ const Section = (props) => {
         {children}
       </section>
     </>
+  );
+};
+const Carousel = () => {
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+
+  const carouselItems = [
+    {
+      image: "https://via.placeholder.com/300",
+      title: "Item 1",
+      description: "Description for Item 1",
+      cta: "Action Button 1",
+    },
+    {
+      image: "https://via.placeholder.com/300",
+      title: "Item 2",
+      description: "Description for Item 2",
+      cta: "Action Button 2",
+    },
+    {
+      image: "https://via.placeholder.com/300",
+      title: "Item 3",
+      description: "Description for Item 3",
+      cta: "Action Button 3",
+    },
+    {
+      image: "https://via.placeholder.com/300",
+      title: "Item 4",
+      description: "Description for Item 4",
+      cta: "Action Button 4",
+    },
+    {
+      image: "https://via.placeholder.com/300",
+      title: "Item 5",
+      description: "Description for Item 5",
+      cta: "Action Button 5",
+    },
+    {
+      image: "https://via.placeholder.com/300",
+      title: "Item 6",
+      description: "Description for Item 6",
+      cta: "Action Button 6",
+    },
+  ];
+
+  const handlePrevious = () => {
+    setCurrentItemIndex(
+      currentItemIndex === 0 ? carouselItems.length - 1 : currentItemIndex - 1,
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentItemIndex(
+      currentItemIndex === carouselItems.length - 1 ? 0 : currentItemIndex + 1,
+    );
+  };
+
+  return (
+    <div className={"carousel"}>
+      <div className={"itemContainer"}>
+        {carouselItems.map((item, index) => (
+          <div
+            key={index}
+            className={`${"carouselItem"} ${
+              index === currentItemIndex ? styles.active : ""
+            }`}
+          >
+            <img
+              src={item.image}
+              alt={`Item ${index + 1}`}
+              className={"itemImage"}
+            />
+            <h3 className={"itemTitle"}>{item.title}</h3>
+            <p className={"itemDescription"}>{item.description}</p>
+            <button className={"actionButton"}>{item.cta}</button>
+          </div>
+        ))}
+      </div>
+      <div className={"navigation"}>
+        <button className={"previousButton"} onClick={handlePrevious}>
+          &lt;
+        </button>
+        <button className={"nextButton"} onClick={handleNext}>
+          &gt;
+        </button>
+      </div>
+    </div>
   );
 };
 

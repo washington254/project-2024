@@ -153,3 +153,77 @@ body {
   cursor: pointer;
   background-color: #f5731085;
 }
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itemContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carouselItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carouselItem.active {
+  opacity: 1;
+}
+
+.itemImage {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.itemTitle {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.itemDescription {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.actionButton {
+  background-color: #f57310;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+.actionButton:hover {
+  cursor: pointer;
+  background-color: #f5731085;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.previousButton,
+.nextButton {
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin: 0 0.25rem;
+}
