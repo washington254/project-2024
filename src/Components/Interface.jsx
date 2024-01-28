@@ -20,35 +20,42 @@ const Carousel = () => {
 
   const carouselItems = [
     {
-      image: "https://via.placeholder.com/200",
+      image: "/1.png",
       title: "Item 1",
       description: "Description for Item 1",
       cta: "Action Button 1",
     },
     {
-      image: "https://via.placeholder.com/200",
+      image: "/2.png",
       title: "Item 2",
       description: "Description for Item 2",
       cta: "Action Button 2",
     },
     {
-      image: "https://via.placeholder.com/200",
+      image: "/3.png",
       title: "Item 3",
       description: "Description for Item 3",
       cta: "Action Button 3",
     },
     {
-      image: "https://via.placeholder.com/200",
+      image: "/4.png",
       title: "Item 4",
       description: "Description for Item 4",
       cta: "Action Button 4",
     },
     {
-      image: "https://via.placeholder.com/200",
+      image: "/5.png",
       title: "Item 5",
       description: "Description for Item 5",
       cta: "Action Button 5",
     },
+      {
+      image: "/6.png",
+      title: "Item 6",
+      description: "Description for Item 6",
+      cta: "Action Button 5",
+    },
+
   ];
 
   const handlePrevious = () => {
@@ -65,6 +72,7 @@ const Carousel = () => {
 
   return (
     <Section className={"carousel"}>
+      <h1>OUR COURSES</h1>
       <div className={"itemContainer"}>
         {carouselItems.map((item, index) => (
           <div key={index} className={`${"carouselItem"}`}>
