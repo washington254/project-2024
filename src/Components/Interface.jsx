@@ -81,8 +81,6 @@ const Carousel = () => {
               alt={`Item ${index + 1}`}
               className={"itemImage"}
             />
-            <h3 className={"itemTitle"}>{item.title}</h3>
-            <p className={"itemDescription"}>{item.description}</p>
             <button className={"actionButton"}>{item.cta}</button>
           </div>
         ))}
@@ -103,7 +101,7 @@ export function Interface(props) {
   const { section, device } = props;
   return (
     <div className={`${styles.interface} interface`}>
-      <Navbar />
+      {/* <Navbar /> */}
       <AboutSection />
       <Skills section={section} />
       <Courses />
@@ -125,7 +123,7 @@ const AboutSection = () => {
           Hi, Traders <br /> Welcome to Goodwill Education{" "}
         </h1>
         <h3>Learn and earn from our online course</h3>
-        <a href="#" className="cta-btn">
+        <a href="#contact" className="cta-btn">
           Get in touch
         </a>
       </div>
@@ -153,10 +151,10 @@ const Courses = () => {
 
 const Contact = () => {
   return (
-    <Section className="contact-container">
+    <Section id="contact" className="contact-container">
      <div className="contact-left">
       <h2 className="heading-contact">Contact Us</h2>
-      <div className="contact-form">
+      <div  className="contact-form">
         <form>
           <label htmlFor="name" className="label">
             Name
