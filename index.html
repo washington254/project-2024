@@ -58,57 +58,58 @@
       
   
     </nav>
-    <div class="contact-popup">
+    <!-- <div class="contact-popup">
       <div class="close-btn">X</div>
       <div class="contact-form">
         <form>
-          <label for="name" class="label">
+          <label for="name" class="label contact-label">
             Name
           </label>
-          <input type="text" name="name" id="name" class="input" />
-          <label id="number" class="label">
+          <input type="text" name="name" id="name" class="input contact-input" />
+          <label id="number" class="label contact-label">
             Phone Number
           </label>
-          <input type="number" name="number" id="number" class="input" />
-
-          <label for="email" class="label">
+          <input type="number" name="number" id="number" class="input contact-input" />
+      
+          <label for="email" class="label contact-label">
             Email
           </label>
-          <input type="email" name="email" id="email" class="input" />
-
-          <label for="message" class="label">
+          <input type="email" name="email" id="email" class="input contact-input" />
+      
+          <label for="message" class="label contact-label">
             Message
           </label>
-          <textarea name="message" id="message" class="textarea"></textarea>
-          <button class="submit-button">Submit</button>
+          <textarea name="message" id="message" class="textarea contact-textarea"></textarea>
+          <button class="submit-button contact-submit-button">Submit</button>
         </form>
       </div>
-    </div>
+      
+    </div> -->
     <div id="root"></div>
     <script>
     
-      const popupOpenBtn = document.getElementById("popup-btn");
-      const popupContainer = document.querySelector(".contact-popup");
-      const popupCloseBtn = document.querySelector(".close-btn");
+      // const popupOpenBtn = document.getElementById("popup-btn");
+      // const popupContainer = document.querySelector(".contact-popup");
+      // const popupCloseBtn = document.querySelector(".close-btn");
       
-      popupOpenBtn.addEventListener("click", function () {
-        popupContainer.style.transform = "translateX(0)";
-      });
+      // popupOpenBtn.addEventListener("click", function () {
+      //   popupContainer.style.transform = "translateX(0)";
+      // });
 
-      popupCloseBtn.addEventListener("click", function () {
-        popupContainer.style.transform = "translateX(100%)";
-      });
+      // popupCloseBtn.addEventListener("click", function () {
+      //   popupContainer.style.transform = "translateX(100%)";
+      // });
 
        // Simulate delay for the loader
-  const loader = document.getElementById("loader");
-  
-  window.onload = function () {
-    // Set a timeout to simulate a delay in hiding the loader
-    setTimeout(function () {
-      loader.style.opacity = "0";
-      loader.style.pointerEvents = "none";
-    }, 1000); // Adjust the delay as needed
-  };
+        const loader = document.getElementById("loader");
+        
+        window.onload = function () {
+          // Set a timeout to simulate a delay in hiding the loader
+          setTimeout(function () {
+            loader.style.opacity = "0";
+            loader.style.pointerEvents = "none";
+          }, 1000); // Adjust the delay as needed
+        };
      </script>
     <script type="module" src="/src/main.jsx"></script>
     

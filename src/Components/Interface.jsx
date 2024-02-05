@@ -3,6 +3,8 @@ import styles from "../app.module.css";
 import { motion } from "framer-motion";
 import { SkillsSvg } from "./SkillsSvg";
 import { useState } from "react";
+import Contact from "./Contact";
+import Work from "./Work";
 
 const Section = (props) => {
   const { children, backgroundColor, className } = props;
@@ -101,12 +103,10 @@ export function Interface(props) {
   const { section, device } = props;
   return (
     <div className={`${styles.interface} interface`}>
-      {/* <Navbar /> */}
       <AboutSection />
       <Skills section={section} />
       <Courses />
       <Contact />
-      <Footer />
     </div>
   );
 }
@@ -146,70 +146,9 @@ const Skills = (props) => {
 };
 
 const Courses = () => {
-  return <Carousel />;
-};
-
-const Contact = () => {
-  return (
-    <Section id="contact" className="contact-container">
-     <div className="contact-left">
-      <h2 className="heading-contact">Contact Us</h2>
-      <div  className="contact-form">
-        <form>
-          <label htmlFor="name" className="label">
-            Name
-          </label>
-          <input type="text" name="name" id="name" className="input" />
-          <label htmlFor="number" className="label">
-            Phone Number
-          </label>
-          <input type="number" name="number" id="number" className="input" />
-
-          <label htmlFor="email" className="label">
-            Email
-          </label>
-          <input type="email" name="email" id="email" className="input" />
-
-          <label htmlFor="message" className="label">
-            Message
-          </label>
-          <textarea name="message" id="message" className="textarea" />
-          <button className="submit-button">Submit</button>
-        </form>
-      </div>
-     </div>
-      <div className="contact-right">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, inventore.</p>
-      </div>
-    </Section>
-  );
+  return <Work />;
 };
 
 
-const Navbar = () => {
-  return (
-    <nav className="navbar">
-    <div className="logo">
-      <img src="./logo.svg" alt="logo" />
-    </div>
-    {/* <h1>LOGO</h1> */}
-    <a href="#" className="cta-btn">
-      Subscribe
-    </a>
 
-  </nav>
-  )
-}
-const Footer = () => {
-  return (
-    <footer>
-      <ul>
-        <li><a href="#">LINK ONE</a></li>
-        <li><a href="#">LINK TWO</a></li>
-        <li><a href="#">LINK THREE</a></li>
-        <li><a href="#">LINK FOUR</a></li>
-      </ul>
-    </footer>
-  )
-}
 
