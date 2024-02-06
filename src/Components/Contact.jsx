@@ -13,7 +13,8 @@ const Contact = () => {
             </h1>
         </div>
 
-            <div id="contact-container">
+           <div className="row center contact-down">
+             <div id="contact-container">
                 <div id="contact-form-container" className="column contact-container">
                     <div id="contact-name-input" className="input-container column">
                         <div className="row">
@@ -60,8 +61,12 @@ const Contact = () => {
                     </div>
                 </div>
 
-
             </div>
+                <div className="contact-img">
+                    <img src="/gww.png" alt="trader"  />
+                </div>
+
+           </div>
             <footer className="row center">
                 <span>&copy; GWWM EDUCATION</span>
 

@@ -141,7 +141,7 @@ body {
   max-width: 30%;
   z-index: 200;
   padding: 2% 5%;
-  background: rgba(255, 255, 255,1);
+  background: rgb(73, 83, 185);
   border-radius: 20px;
   transform: translateX(100%);
   transition: display 1s ease;
@@ -161,7 +161,6 @@ body {
   margin-top: -1%;
   padding: 2rem;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255);
   width: 24rem; /* Adjust the width as needed */
   max-width: 100%;
 }
@@ -173,7 +172,7 @@ body {
 
 .contact-label {
   font-weight: bold;
-  color: #333;
+  color: #fff;
   margin-bottom: 0.5rem;
   margin-top: 2rem;
 }
@@ -202,6 +201,10 @@ body {
   box-shadow: 0 15px 24px rgba(0, 0, 0, 0.3);
   padding: 1.2rem;
 }
+#message{
+  background: red;
+}
+
 
 .contact-submit-button {
   background-color: #f57310;
@@ -710,6 +713,25 @@ hr {
   max-height: 90vh;
   box-sizing: border-box;
 }
+.contact-img{
+  margin: auto 5% 10px;
+  padding: 10px;
+  width: 760px;
+  max-width: 50%;
+  height: 560px;
+  max-height: 90vh;
+  box-sizing: border-box;
+}
+.contact-img img{
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+@media(max-width: 700px){
+  .contact-img{
+    display: none;
+  }
+}
 
 #contact-container input,
 textarea {
@@ -836,7 +858,7 @@ line {
   }
 
   #contact-container {
-      max-width: 100%;
+      max-width: 66%;
       width: 580px
   }
 }
