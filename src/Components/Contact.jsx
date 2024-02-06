@@ -6,7 +6,7 @@ const Contact = () => {
         <div className="column" id="contact-header-container">
             <div className="section-subheader-container">
                 <hr/>
-                <h3>Say hello 👋</h3>
+                <h3 className='say-hello'>Say hello 👋</h3>
             </div>
             <h1 className="section-header-container">
                 Contact Us

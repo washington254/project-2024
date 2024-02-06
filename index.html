@@ -58,7 +58,7 @@
       
   
     </nav>
-    <!-- <div class="contact-popup">
+    <div class="contact-popup">
       <div class="close-btn">X</div>
       <div class="contact-form">
         <form>
@@ -84,21 +84,25 @@
         </form>
       </div>
       
-    </div> -->
+    </div>
     <div id="root"></div>
     <script>
     
-      // const popupOpenBtn = document.getElementById("popup-btn");
-      // const popupContainer = document.querySelector(".contact-popup");
-      // const popupCloseBtn = document.querySelector(".close-btn");
+      const popupOpenBtn = document.getElementById("popup-btn");
+      const popupContainer = document.querySelector(".contact-popup");
+      const popupCloseBtn = document.querySelector(".close-btn");
       
-      // popupOpenBtn.addEventListener("click", function () {
-      //   popupContainer.style.transform = "translateX(0)";
-      // });
+      popupOpenBtn.addEventListener("click", function () {
+        popupContainer.style.transform = "translateX(0)";
+        popupContainer.style.display = "block";
+        popupContainer.style.opacity = 1;
+      });
 
-      // popupCloseBtn.addEventListener("click", function () {
-      //   popupContainer.style.transform = "translateX(100%)";
-      // });
+      popupCloseBtn.addEventListener("click", function () {
+        popupContainer.style.transform = "translateX(100%)";
+        popupContainer.style.display = "none";
+        popupContainer.style.opacity = 0;
+      });
 
        // Simulate delay for the loader
         const loader = document.getElementById("loader");
