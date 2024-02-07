@@ -16,10 +16,11 @@
   top: 100vh;
   background: linear-gradient(
     0deg,
-    rgb(52, 47, 133) 0%,
-    rgb(25, 25, 107) 51%,
-    rgb(9, 21, 75) 100%
+    rgba(52, 47, 133) 0%,
+    rgba(25, 25, 107) 51%,
+    rgba(9, 21, 75) 100%
   );
+  /* background: rgba(52, 47, 133,); */
   overflow: hidden;
 }
 

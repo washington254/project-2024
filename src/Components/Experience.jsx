@@ -102,7 +102,7 @@ export function Experience(props) {
 
   return (
     <>
-      <group  position={[ device==='web'?0:-1.2, device==='web'?0:-0.5, 0]} scale={device==='web'?[1.15, 1.15, 1.15]:[0.8, 0.8, 0.8]}>
+      <group  position={[ device==='web'?0:-1.2, device==='web'?0:-0.5, 0]} scale={device==='web'?[1.12, 1.05, 1.12]:[0.8, 0.8, 0.8]}>
       
       {  <BackGroundModel_3 section={section} device={device} /> }
 

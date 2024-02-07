@@ -58,7 +58,7 @@ export default function App() {
           height:'100%',
           // transform:`translateX(${backVideoX}px)`
         }}>
-          <source src="/bACKGROUND.mp4" type="video/mp4"/>
+          {/* <source src="/bACKGROUND.mp4" type="video/mp4"/> */}
           {/* stock-market-2023-11-27-05-36-31-utc_compressed */}
         </video>
 

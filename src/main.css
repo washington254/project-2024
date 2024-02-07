@@ -110,6 +110,7 @@ body {
  .navbar .logo img{
   width: 100%;
   scale: 1.2;
+  transform: translateY(20%);
  }
  @media(max-width: 700px){
   .navbar{
@@ -273,7 +274,6 @@ hr {
   border: none
 }
 .section-subheader-container {
-  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center
@@ -282,7 +282,7 @@ hr {
 .section-subheader-container hr {
   width: 40px;
   background-color: #ff923e;
-  margin: 0 20px 0 0
+  margin: 0 10px 0 0;
 }
 
 ::-moz-selection {
@@ -385,6 +385,7 @@ hr {
 #work-section h2 {
   font-size: 4.3rem;
   font-weight: 600;
+  margin: -3% 10px 1%;
 }
 @media(max-width: 700px){
   #work-section h2{
@@ -416,7 +417,7 @@ hr {
 }
 #work-section h5 {
   color: #ff923e;
-  font-size: 1.3rem;
+  font-size: 2.3rem;
   font-weight: 500
 }
 
@@ -424,10 +425,13 @@ hr {
 #work-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
   position: relative;
   min-height: 100vh;
-  width: 100%
+  width: 100%;
+  /* transform: translateX(15%) ; */
 }
 
 #work-content {
@@ -583,7 +587,8 @@ hr {
 
 .work-disabled-navigation-button {
   background: #a7adb8 !important;
-  cursor: unset !important
+  cursor: unset !important;
+  pointer-events: none;
 }
 
 .work-disabled-navigation-button:hover {
@@ -644,6 +649,7 @@ hr {
 }
 
  #contact-section{
+  /* transform: translateX(15%) ; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -652,7 +658,6 @@ hr {
 
 #contact-section h1 {
   font-size: 4.3rem;
-
 }
 
 #contact-section h3 {
@@ -665,9 +670,9 @@ hr {
   font-weight: 600
 }
 
-#contact-section h5 {
+#contact-section h2 {
   color: #ff923e;
-  font-size: 1.2rem;
+  font-size: 2.3rem;
   font-weight: 500
 }
 
@@ -706,12 +711,13 @@ hr {
   margin-top: 40px;
   padding: 10px;
   border-radius: 20px;
-  background: white;
+  background: rgb(73, 83, 185);
   width: 540px;
   max-width: 45%;
   height: 560px;
   max-height: 90vh;
   box-sizing: border-box;
+  margin-bottom: 2%;
 }
 .contact-img{
   margin: auto 5% 10px;
@@ -797,7 +803,7 @@ textarea:focus {
 }
 
 #contact-button-container .social-icon {
-  margin: 0 8px
+  margin: 0 8px;
 }
 
 .error-label {
@@ -828,13 +834,14 @@ textarea:focus {
   margin-top: auto;
   margin-bottom: 50px;
   height: 90px;
+  color: #fff;
   min-height: 90px
 }
 
 #contact-result-container polyline,
 line {
   fill: none;
-  stroke-width: 15
+  stroke-width: 15;
 }
 
 #contact-result-button {
@@ -886,6 +893,7 @@ line {
   position: absolute;
   border-radius: 50%;
   border-style: solid;
+  background: #fff;
   top: 0;
   left: 0;
   z-index: 999;
@@ -924,15 +932,13 @@ line {
 /* FOOTER  */
 footer {
   width: 100%;
-  padding: 2% auto;
   text-align: center;
 }
 
 
 footer span,
 #legal-container a {
-  font-size: .9rem;
-  color: #7c8594;
+  color: #333;
   background: none;
 }
 #legal-container a:hover{
@@ -943,10 +949,3 @@ footer span,
   text-decoration: underline
 }
 
-#legal-container {
-  margin-left: 40px;
-}
-
-#legal-container :first-child {
-  margin-right: 40px;
-}

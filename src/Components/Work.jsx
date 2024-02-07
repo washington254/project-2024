@@ -96,18 +96,18 @@ const work = () => {
         // Add swipe gesture initialization logic here
       };
     
-      const moveBack = () => {
-        if (currentItemIndex !== workItems.length - 1 && !itemsAreMoving) {
-          setCurrentItemIndex(currentItemIndex + 1);
-        }
-      };
-    
-      const moveForward = () => {
-        if (currentItemIndex !== 0 && !itemsAreMoving) {
+     
+    const moveBack = () => {
+      if (currentItemIndex > 0 && !itemsAreMoving) {
           setCurrentItemIndex(currentItemIndex - 1);
-        }
-      };
-    
+      }
+  };
+
+  const moveForward = () => {
+      if (currentItemIndex < workItems.length - 1 && !itemsAreMoving) {
+          setCurrentItemIndex(currentItemIndex + 1);
+      }
+  };
       const onArrowClick = () => {
         window.addEventListener('keyup', (event) => {
           if (scrollAllowed()) {
@@ -127,12 +127,11 @@ const work = () => {
     
       const updatePositions = (initial = false) => {
         if (!itemsAreMoving || initial) {
-          updateNavigation();
-          setItemsAreMoving(true);
-    
-          setTimeout(() => setItemsAreMoving(false), 500); // Adjust timing as needed
+            updateNavigation();
+            setItemsAreMoving(true);
+            setTimeout(() => setItemsAreMoving(false), 500); // Adjust timing as needed
         }
-      };
+    };
     
       const updateNavigation = () => {
         // Add logic for updating navigation button states here
@@ -142,6 +141,8 @@ const work = () => {
         setCurrentItemIndex(index);
         updatePositions();
       };
+      const isLastItem = currentItemIndex === workItems.length - 1;
+      const isFirstItem = currentItemIndex === 0;
 
       return (
         <section id="work-section">

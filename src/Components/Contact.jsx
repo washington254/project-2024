@@ -4,9 +4,8 @@ const Contact = () => {
   return (
     <section id="contact-section" className="content-width column">
         <div className="column" id="contact-header-container">
-            <div className="section-subheader-container">
-                <hr/>
-                <h3 className='say-hello'>Say hello 👋</h3>
+            <div >
+                <h2 className='say-hello'>Say hello 👋</h2>
             </div>
             <h1 className="section-header-container">
                 Contact Us
@@ -68,9 +67,10 @@ const Contact = () => {
 
            </div>
             <footer className="row center">
-                <span>&copy; GWWM EDUCATION</span>
 
-                <div id="legal-container" className="row">
+                <div id="legal-container" className="row center">
+                    <span></span>
+                    <a tabindex="-1" className="legal-link" href="#" target="_blank">&copy; GWWM EDUCATION</a>
                     <a tabindex="-1" className="legal-link" href="#" target="_blank">Legal Notice</a>
                     <a tabindex="-1" className="legal-link" href="#" target="_blank">Privacy
                         Policy</a>
