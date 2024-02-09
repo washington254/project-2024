@@ -123,7 +123,7 @@ const AboutSection = () => {
           Hi, Traders <br /> Welcome to Goodwill Education{" "}
         </h1>
         <h3>Learn and earn from our online course</h3>
-        <a href="#contact" className="cta-btn">
+        <a href="#contact-section" className="cta-btn">
           Get in touch
         </a>
       </div>

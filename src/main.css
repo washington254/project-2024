@@ -725,12 +725,15 @@ hr {
   width: 760px;
   max-width: 50%;
   height: 560px;
+  background: url("/bull.png");
   max-height: 90vh;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .contact-img img{
   border-radius: 20px;
-  width: 100%;
+  width: 60%;
+  transform: translateY(5%);
   height: 100%;
 }
 @media(max-width: 700px){
@@ -924,6 +927,13 @@ line {
   position: absolute;
   opacity: .1;
   border-radius: 50%
+}
+.keys{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

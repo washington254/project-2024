@@ -62,11 +62,38 @@ const Contact = () => {
 
             </div>
                 <div className="contact-img">
-                    <img src="/gww.png" alt="trader"  />
+                    <img src="/man.png" alt="trader"  />
                 </div>
 
            </div>
+           <div className="keys row center">
+                    <p>
+                    Goodwill Wealth Management Pvt Ltd  <br /><br />
+                    MCX : 11095   |    ICEX : 2035   |    SEBI Regn. No : INZ000177036 <br />
+                        
+                    
+                    MSEI : 11240   |    NSE : 90097   |    BSE : 6648   <br />
+
+                    Clearing Code   | <br />
+
+                    NSE : M52003   |    BSE : 6648 <br />
+
+                    CDSL DP   | <br />
+
+                    DP ID : 12084200   |    SEBI Regn. No : IN - DP - CDSL - 309 - 2017<br />
+
+                    Research Analyst   |<br />
+                    SEBI Regn. No : INH200005179<br />
+
+                    Mutual Funds   |<br />
+                    ARN : 182218<br /><br />
+
+                    please write to us : promotions@gwcindia.in
+                    </p>
+                </div>
+         
             <footer className="row center">
+                
 
                 <div id="legal-container" className="row center">
                     <span></span>
