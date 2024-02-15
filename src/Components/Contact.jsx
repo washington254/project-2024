@@ -68,25 +68,17 @@ const Contact = () => {
            </div>
            <div className="keys row center">
                     <p>
-                    Goodwill Wealth Management Pvt Ltd  <br /><br />
-                    MCX : 11095   |    ICEX : 2035   |    SEBI Regn. No : INZ000177036 <br />
-                        
-                    
-                    MSEI : 11240   |    NSE : 90097   |    BSE : 6648   <br />
+                    Goodwill Wealth Management Pvt Ltd <br />  MCX : 11095   |    ICEX : 2035   |    SEBI Regn. No : INZ000177036 <br />
+                                                        
+                                                        MSEI : 11240   |    NSE : 90097   |    BSE : 6648   <br />
 
-                    Clearing Code   | <br />
+                   <br /> Clearing Code   |  NSE : M52003   |    BSE : 6648 <br />
 
-                    NSE : M52003   |    BSE : 6648 <br />
+                   <br /> CDSL DP   |  DP ID : 12084200   |    SEBI Regn. No : IN - DP - CDSL - 309 - 2017<br />
 
-                    CDSL DP   | <br />
+                    <br /> Research Analyst   |  SEBI Regn. No : INH200005179<br />
 
-                    DP ID : 12084200   |    SEBI Regn. No : IN - DP - CDSL - 309 - 2017<br />
-
-                    Research Analyst   |<br />
-                    SEBI Regn. No : INH200005179<br />
-
-                    Mutual Funds   |<br />
-                    ARN : 182218<br /><br />
+                   <br /> Mutual Funds   | ARN : 182218<br /><br />
 
                     please write to us : promotions@gwcindia.in
                     </p>
@@ -98,6 +90,8 @@ const Contact = () => {
                 <div id="legal-container" className="row center">
                     <span></span>
                     <a tabindex="-1" className="legal-link" href="#" target="_blank">&copy; GWWM EDUCATION</a>
+                    <a tabindex="-1" className="legal-link" href="#" target="_blank">procedures</a>
+                    <a tabindex="-1" className="legal-link" href="#" target="_blank">terms and conditions</a>
                     <a tabindex="-1" className="legal-link" href="#" target="_blank">Legal Notice</a>
                     <a tabindex="-1" className="legal-link" href="#" target="_blank">Privacy
                         Policy</a>

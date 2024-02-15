@@ -51,7 +51,7 @@ function Cloud({ count = 4, radius = 20, wordsArray }) {
 
   useFrame((_, delta) => {
     // Make the entire cloud rotate
-    cloudRef.current.rotation.y += 0.3 * delta;
+    cloudRef.current.rotation.y += 0.4 * delta;
     cloudRef.current.rotation.x = 0.1;
 
     // Adjust the rotation speed as needed

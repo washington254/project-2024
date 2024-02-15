@@ -112,6 +112,8 @@ export function Interface(props) {
 }
 
 const AboutSection = () => {
+  
+
   return (
     <Section
       className={`${styles.interfaceSection}  interface-part interface-welcome`}
@@ -123,7 +125,7 @@ const AboutSection = () => {
           Hi, Traders <br /> Welcome to Goodwill Education{" "}
         </h1>
         <h3>Learn and earn from our online course</h3>
-        <a href="#contact-section" className="cta-btn">
+        <a href="#" className="popup-btn cta-btn">
           Get in touch
         </a>
       </div>

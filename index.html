@@ -41,23 +41,25 @@
       }
     </style>
 
+
      <!-- Loader container -->
   <div class="loader-container" id="loader">
     <img src="./logo.svg" alt="logo" class="loader-logo" />
     <div class="loader-title">GWWM Education</div>
     <p class="loader-text">Loading... Please wait.</p>
   </div>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./logo.svg" alt="logo" />
+    </div>
+    <a href="#"  class="popup-btn cta-btn">
+      Subscribe
+    </a>
+  </nav>
 
-    <nav class="navbar">
-      <div class="logo">
-        <img src="./logo.svg" alt="logo" />
-      </div>
-      <a href="#" id="popup-btn" class="cta-btn">
-        Subscribe
-      </a>
-      
-  
-    </nav>
+
+
+ 
     <div class="contact-popup">
       <div class="close-btn">X</div>
       <div class="contact-form">
@@ -85,10 +87,12 @@
       </div>
       
     </div>
+   
     <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
     <script>
     
-      const popupOpenBtn = document.getElementById("popup-btn");
+      const popupOpenBtn = document.querySelector(".popup-btn");
       const popupContainer = document.querySelector(".contact-popup");
       const popupCloseBtn = document.querySelector(".close-btn");
       
@@ -114,8 +118,6 @@
             loader.style.pointerEvents = "none";
           }, 1000); // Adjust the delay as needed
         };
-     </script>
-    <script type="module" src="/src/main.jsx"></script>
-    
+    </script>
   </body>
 </html>

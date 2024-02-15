@@ -88,7 +88,7 @@ export default function App() {
 
         <SimpleCameraRig></SimpleCameraRig>
 
-        <ScrollControls pages={device==='web'? 6.5: 4.96} damping={0.2} maxSpeed={0.7}>
+        <ScrollControls pages={device==='web'? 6.3: 4.96} damping={0.2} maxSpeed={0.7}>
           <ScrollManager
             section={section}
             onSectionChange={setSection}

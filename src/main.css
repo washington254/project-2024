@@ -46,8 +46,12 @@ body {
 .mobile .interface .interface-part.interface-skills {
   transform: translateY(70%);
 }
+#svgSkills{
+  border-radius: 20px;
+}
 
 .web #svgSkills {
+  color: #fff !important;
   width: 586px;
   height: auto;
   transform: translateX(-80%) !important;
@@ -140,7 +144,7 @@ body {
   display: none;
   right: 0;
   max-width: 30%;
-  z-index: 200;
+  z-index: 999;
   padding: 2% 5%;
   background: rgb(73, 83, 185);
   border-radius: 20px;
@@ -725,7 +729,6 @@ hr {
   width: 760px;
   max-width: 50%;
   height: 560px;
-  background: url("/bull.png");
   max-height: 90vh;
   box-sizing: border-box;
   overflow: hidden;
@@ -750,7 +753,8 @@ textarea {
   background: transparent !important;
   font-weight: 500;
   color: #111029;
-  resize: none
+  resize: none;
+  min-width: 0px;
 }
 
 #contact-container input:focus,
@@ -868,8 +872,8 @@ line {
   }
 
   #contact-container {
-      max-width: 66%;
-      width: 580px
+      max-width: 61%;
+      width: 540px;
   }
 }
 
@@ -930,7 +934,6 @@ line {
 }
 .keys{
   width: 100%;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -945,7 +948,9 @@ footer {
   text-align: center;
 }
 
-
+#legal-container{
+  flex-wrap: wrap;
+}
 footer span,
 #legal-container a {
   color: #333;
