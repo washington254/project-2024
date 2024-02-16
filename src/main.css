@@ -103,7 +103,7 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: 85%;
-  z-index: 100;
+  z-index: 50;
   transform: translateX(10%);
  }
 
@@ -659,6 +659,32 @@ hr {
   align-items: center;
   z-index: 1
 }
+.contact-popup-interface{
+  position: absolute;
+  width: 150%;
+  height: 200%;
+  top: 0;
+  right: 0;
+  transform: translateX(30%);
+  background: rgba(2, 23, 255, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  justify-content: center;
+  /* bottom: 0; */
+}
+.popup-close-btn{
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  transform: translateX(-100%);
+}
+.inside-contact{
+  width: 100%;
+  height: 100%;
+  transform: translateX(35%) translateY(8%);
+}
 
 #contact-section h1 {
   font-size: 4.3rem;
@@ -727,16 +753,23 @@ hr {
   margin: auto 5% 10px;
   padding: 10px;
   width: 760px;
-  max-width: 50%;
+  max-width: 53%;
   height: 560px;
-  max-height: 90vh;
+  max-height: 93vh;
   box-sizing: border-box;
   overflow: hidden;
+}
+.contact-img .cta-ico{
+  width: 55%;
+  height: 40%;
+  transform: translateY(33%) translateX(-4%);
+  /* position: absolute; */
+  /* flex-basis: 30%; */
 }
 .contact-img img{
   border-radius: 20px;
   width: 60%;
-  transform: translateY(5%);
+  transform: translateY(-38%) translateX(10%);
   height: 100%;
 }
 @media(max-width: 700px){

@@ -5,6 +5,7 @@ import { SkillsSvg } from "./SkillsSvg";
 import { useState } from "react";
 import Contact from "./Contact";
 import Work from "./Work";
+import ContactForm from './ContactForm';
 
 const Section = (props) => {
   const { children, backgroundColor, className } = props;
@@ -112,6 +113,11 @@ export function Interface(props) {
 }
 
 const AboutSection = () => {
+  const [showContactPopup, setShowContactPopup] = useState(false);
+
+  const toggleContactPopup = () => {
+      setShowContactPopup(!showContactPopup);
+  };
   
 
   return (
@@ -125,10 +131,21 @@ const AboutSection = () => {
           Hi, Traders <br /> Welcome to Goodwill Education{" "}
         </h1>
         <h3>Learn and earn from our online course</h3>
-        <a href="#" className="popup-btn cta-btn">
+        <a  href="#" onClick={toggleContactPopup} className="popup-btn cta-btn">
           Get in touch
         </a>
       </div>
+      {showContactPopup && (
+                <div className="contact-popup-interface">
+                    <div className="inside-contact">
+                        <ContactForm />
+                        <a href="#" onClick={toggleContactPopup} className="popup-close-btn">
+                            Close
+                   </a>
+                    </div>
+                   
+                </div>
+            )}
     </Section>
   );
 };
