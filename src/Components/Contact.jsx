@@ -47,11 +47,11 @@ const Contact = () => {
 
                 <div id="legal-container" className="row center">
                     <span></span>
-                    <a tabindex="-1" className="legal-link" href="#" target="_blank">&copy; GWWM EDUCATION</a>
-                    <a tabindex="-1" className="legal-link" href="#" target="_blank">procedures</a>
-                    <a tabindex="-1" className="legal-link" href="#" target="_blank">terms and conditions</a>
-                    <a tabindex="-1" className="legal-link" href="#" target="_blank">Legal Notice</a>
-                    <a tabindex="-1" className="legal-link" href="#" target="_blank">Privacy
+                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">&copy; GWWM EDUCATION</a>
+                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">procedures</a>
+                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">terms and conditions</a>
+                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">Legal Notice</a>
+                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">Privacy
                         Policy</a>
                 </div>
             </footer>

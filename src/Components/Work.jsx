@@ -152,7 +152,7 @@ const work = () => {
           <div className="column" id="work-header-container">
             <div className="section-subheader-container">
               <hr />
-              <h5 className='our-courses'>Our Courses</h5>
+              <h5 className='say-hello'>Our Courses</h5>
             </div>
             <h2 className="section-header-container">Learn Before <br/> Investing / Trading </h2>
           </div>
