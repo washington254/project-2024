@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ContactForm = () => {
+const ContactForm = ({ ids }) => {
     return (
-        <div id="contact-container">
+        <div id={ids}>
             <div id="contact-form-container" className="column contact-container">
                 <div id="contact-name-input" className="input-container column">
                     <div className="row">
@@ -25,7 +25,6 @@ const ContactForm = () => {
                     </div>
                     <input id="contact-phone-input-field" type="number" tabIndex="-1" />
                 </div>
-                <br />
                 <div id="contact-message-input" className="input-container column">
                     <div className="row">
                         <label htmlFor="contact-message-input-field">Message :</label>
@@ -34,12 +33,11 @@ const ContactForm = () => {
                     <textarea id="contact-message-input-field" tabIndex="-1"></textarea>
                 </div>
                 <div className="column" id="contact-button-container">
-                    <div>
-                        <a tabIndex="-1" target="_blank" href="https://twitter.com/DavidHckh"><img className="social-icon" src="icons/twitter-icon.png" alt="twitter contact social icon small 28x28" height="28" width="28" /></a>
-                        <a tabIndex="-1" target="_blank" href="https://github.com/davidhckh"><img className="social-icon" alt="github contact social icon small 28x28" height="28" width="28" src="icons/github-icon.png" /></a>
-                        <a tabIndex="-1" target="_blank" href="https://www.linkedin.com/in/david-heckhoff-1ba8a622a/">
+                    <div className='icon-container'>
+                        <a tabIndex="-1" target="_blank" href="#"><img className="social-icon" src="icons/twitter-icon.png" alt="twitter contact social icon small 28x28" height="28" width="28" /></a>
+                        <a tabIndex="-1" target="_blank" href="#"><img className="social-icon" alt="github contact social icon small 28x28" height="28" width="28" src="icons/github-icon.png" /></a>
+                        <a tabIndex="-1" target="_blank" href="#">
                             <img className="social-icon " alt="linkedin contact social icon small 28x28" height="28" width="28" src="icons/linkedin-icon.png" /></a>
-                        <a tabIndex="-1" href="mailto:#"> <img className="social-icon" alt="email contact social icon small 28x28" height="28" width="28" src="icons/mail-icon.png" /></a>
 
                     </div>
                     <div>

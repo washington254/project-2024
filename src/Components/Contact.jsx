@@ -15,7 +15,7 @@ const Contact = () => {
         </div>
 
            <div className="row center contact-down">
-             <ContactForm />
+             <ContactForm ids={"contact-container"} />
                 <div className="contact-img">
                     <div className="cta-ico">
                         <img src="/CTA.png" alt="call to action" />

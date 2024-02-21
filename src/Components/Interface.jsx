@@ -137,12 +137,15 @@ const AboutSection = () => {
       </div>
       {showContactPopup && (
                 <div className="contact-popup-interface">
-                    <div className="inside-contact">
-                        <ContactForm />
-                        <a href="#" onClick={toggleContactPopup} className="popup-close-btn">
+                  <a href="#" onClick={toggleContactPopup} className="popup-close-btn">
                             Close
                    </a>
+                 
+                    <div className="inside-contact">
+                    <ContactForm ids={"contact-container-2"} />
+                  
                     </div>
+             
                    
                 </div>
             )}
