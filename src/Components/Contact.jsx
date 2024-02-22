@@ -14,33 +14,35 @@ const Contact = () => {
             </h1>
         </div>
 
-           <div className="row center contact-down">
+           <div className="row center contact-items">
              <ContactForm ids={"contact-container"} />
-                <div className="contact-img">
-                    <div className="cta-ico">
-                        <img src="/CTA.png" alt="call to action" />
-                    </div>
-                    <img src="/man.png" alt="trader"  />
-                </div>
-
-           </div>
-           <div className="keys row center">
-                    <p>
-                    Goodwill Wealth Management Pvt Ltd <br />  MCX : 11095   |    ICEX : 2035   |    SEBI Regn. No : INZ000177036 <br />
+             <div className="keys row center">
+                    <div>
+                    <b>
+                        <h3>
+                            
+                        Goodwill Wealth Management Pvt Ltd
+                        </h3>
+                    </b>  MCX : 11095   |    ICEX : 2035   |    SEBI Regn. No : INZ000177036 <br />
                                                         
                                                         MSEI : 11240   |    NSE : 90097   |    BSE : 6648   <br />
 
-                   <br /> Clearing Code   |  NSE : M52003   |    BSE : 6648 <br />
+                   <br /> <b>Clearing Code  </b>  |  NSE : M52003   |    BSE : 6648 <br />
 
-                   <br /> CDSL DP   |  DP ID : 12084200   |    SEBI Regn. No : IN - DP - CDSL - 309 - 2017<br />
+                   <br /> <b>CDSL DP</b>    |  DP ID : 12084200   |    SEBI Regn. No : IN - DP - CDSL - 309 - 2017<br />
 
-                    <br /> Research Analyst   |  SEBI Regn. No : INH200005179<br />
+                    <br /><b>Research Analyst  </b>  |  SEBI Regn. No : INH200005179<br />
 
-                   <br /> Mutual Funds   | ARN : 182218<br /><br />
+                   <br /> <b>Mutual Funds </b>  | ARN : 182218<br /><br />
 
+                    <b>
                     please write to us : promotions@gwcindia.in
-                    </p>
+                    </b>
+                    </div>
                 </div>
+
+           </div>
+        
          
             <footer className="row center">
                 
