@@ -18,7 +18,6 @@ const HandleResize = ({ cameraRef, setDevice, }) => {
         );
       }
 
-      let device;
         if (innerWidth >= 2000) {
           device = "large";
         } else {
