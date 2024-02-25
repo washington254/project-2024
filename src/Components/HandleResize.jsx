@@ -18,7 +18,14 @@ const HandleResize = ({ cameraRef, setDevice, }) => {
         );
       }
 
-      setDevice(innerWidth > innerHeight ? "web" : "mobile");
+      let device;
+        if (innerWidth >= 2000) {
+          device = "large";
+        } else {
+          device = innerWidth > innerHeight ? "web" : "mobile";
+        }
+        
+        setDevice(device);
       // setBackVideoX(innerWidth > 768 ? 0 : (1200 - innerWidth / 2) * -1);
     };
 
