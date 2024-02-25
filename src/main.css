@@ -722,7 +722,7 @@ hr {
   .keys{
     margin: 3% auto;
     width: 40%;
-    transfom: scale(0.7) !important;
+    transfom: scaleX(0.2) !important;
     /* font-size: 1.1rem; */
     max-width: 54%;
     /* flex-wrap: wrap; */
