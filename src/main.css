@@ -719,12 +719,12 @@ hr {
   #contact-section{
     transform: translateY(1%) translateX(-4%);
   }
-  .keys{
+  .contact-items .keys{
     margin: 3% auto;
     width: 40%;
-    transfom: scaleX(0.2) !important;
+    scale: .73 !important;
     /* font-size: 1.1rem; */
-    max-width: 54%;
+    max-width: 53%;
     /* flex-wrap: wrap; */
   }
 }
