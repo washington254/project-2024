@@ -1,9 +1,9 @@
-import React, { useEffect, useState ,useRef } from 'react';
+import React, { useEffect ,useRef } from 'react';
 
 const HandleResize = ({ cameraRef, setDevice, }) => {
   
   
-  const [device, setDevice] = useState("web");
+ 
   
   useEffect(() => {
     const handleResize = () => {
@@ -21,6 +21,7 @@ const HandleResize = ({ cameraRef, setDevice, }) => {
           newZPosition
         );
       }
+      let device;
         if (innerWidth >= 2000) {
           device = "large";
         } else {
