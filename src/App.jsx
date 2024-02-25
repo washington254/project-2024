@@ -87,7 +87,7 @@ export default function App() {
         {/* <OrbitControls enableZoom={false} /> */}
 
         <SimpleCameraRig></SimpleCameraRig>
-            <ScrollControls pages={device==='web'? 4.2: 4.9} damping={0.2} maxSpeed={0.7}>
+          <ScrollControls pages={device==='web'? 5.8: 4.9} damping={0.2} maxSpeed={0.7}>
           <ScrollManager
             section={section}
             onSectionChange={setSection}
