@@ -21,7 +21,7 @@ const HandleResize = ({ cameraRef, setDevice, }) => {
           newZPosition
         );
       }
-      setDevice(innerWidth > innerHeight ? "web" : "mobile"
+      setDevice(innerWidth > innerHeight ? "web" : "mobile");
       // setBackVideoX(innerWidth > 768 ? 0 : (1200 - innerWidth / 2) * -1);
     };
 
