@@ -33,13 +33,6 @@ const ContactForm = ({ ids }) => {
                     <textarea id="contact-message-input-field" tabIndex="-1"></textarea>
                 </div>
                 <div className="column" id="contact-button-container">
-                    <div className='icon-container'>
-                        <a tabIndex="-1" target="_blank" href="#"><img className="social-icon" src="icons/twitter-icon.png" alt="twitter contact social icon small 28x28" height="28" width="28" /></a>
-                        <a tabIndex="-1" target="_blank" href="#"><img className="social-icon" alt="github contact social icon small 28x28" height="28" width="28" src="icons/github-icon.png" /></a>
-                        <a tabIndex="-1" target="_blank" href="#">
-                            <img className="social-icon " alt="linkedin contact social icon small 28x28" height="28" width="28" src="icons/linkedin-icon.png" /></a>
-
-                    </div>
                     <div>
                         <div id="contact-submit-button" className="small-button orange-hover">
                             Submit
