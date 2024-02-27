@@ -38,9 +38,9 @@ const Contact = () => {
                     <b>
                     please write to us : promotions@gwcindia.in
                     </b>
-                    <br />
+                    <br /> <br />
                     <b>Missed call </b> 90037 90027
-                    <br />
+                    <br /> <br />
                     <b>WhatsApp </b>7338895491
                     </div>
                 </div>
