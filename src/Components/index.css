@@ -601,7 +601,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: translateX(-14%) !important;
     }
 
     #work-header-container {
@@ -610,6 +609,11 @@
     }
 }
 
+@media (max-width: 700px){
+     .work-item-container{
+        transform: translateX(-3%) !important;
+    }
+}
 @media (max-width: 480px) {
     .work-inactive-item-container {
         opacity: 0
