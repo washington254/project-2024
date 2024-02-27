@@ -38,6 +38,10 @@ const Contact = () => {
                     <b>
                     please write to us : promotions@gwcindia.in
                     </b>
+                    <br />
+                    <b>Missed call </b> 90037 90027
+                    <br />
+                    <b>WhatsApp </b>7338895491
                     </div>
                 </div>
 
@@ -49,12 +53,12 @@ const Contact = () => {
 
                 <div id="legal-container" className="row center">
                     <span></span>
-                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">&copy; GWWM EDUCATION</a>
-                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">procedures</a>
+                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">&copy; GWWM Education</a>
+                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">Disclaimer</a>
                     <a tabIndex="-1" className="legal-link" href="#" target="_blank">terms and conditions</a>
-                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">Legal Notice</a>
-                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">Privacy
-                        Policy</a>
+                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">Risk Disclosure</a>
+                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">Policy</a>
+                    <a tabIndex="-1" className="legal-link" href="#" target="_blank">Do's and Dont's</a>
                 </div>
             </footer>
 </section>
