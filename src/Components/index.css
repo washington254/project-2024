@@ -598,8 +598,10 @@
 
 @media (max-aspect-ratio: 12/10) {
     #work-content {
+        display: flex;
         align-items: center;
-        justify-content: center
+        justify-content: center;
+        transform: translateX(-2%);
     }
 
     #work-header-container {
