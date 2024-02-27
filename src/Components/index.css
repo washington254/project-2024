@@ -610,8 +610,8 @@
 }
 
 @media (max-width: 700px){
-     .work-item-container{
-        transform: translateX(-3%) !important;
+     #work-render-container{
+        transform: translateX(-5%) !important;
     }
 }
 @media (max-width: 480px) {
