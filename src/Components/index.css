@@ -601,7 +601,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: translateX(-4%);
+        transform: translateX(-14%) !important;
     }
 
     #work-header-container {
