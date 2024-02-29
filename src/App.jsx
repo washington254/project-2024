@@ -28,6 +28,10 @@ export default function App() {
   // const [backVideoX, setBackVideoX] = useState(0);
   const cameraRef = useRef();
 
+  const isWideScreen = window.innerWidth > 2000;
+  const pages = isWideScreen ? (device === 'web' ? 4.5 : 5.1) : (device === 'web' ? 5.6 : 5.1);
+
+
 
 
   const mapNumRange = (num, inMin, inMax, outMin, outMax) =>
@@ -87,7 +91,8 @@ export default function App() {
         {/* <OrbitControls enableZoom={false} /> */}
 
         <SimpleCameraRig></SimpleCameraRig>
-          <ScrollControls pages={device==='web'? 4.5 : 5.1} damping={0.2} maxSpeed={0.7}>
+
+          <ScrollControls pages={pages} damping={0.2} maxSpeed={0.7}>
           <ScrollManager
             section={section}
             onSectionChange={setSection}
