@@ -29,7 +29,7 @@ export default function App() {
   const cameraRef = useRef();
 
   const isWideScreen = window.innerWidth > 2000;
-  const pages = isWideScreen ? (device === 'web' ? 4.5 : 5.1) : (device === 'web' ? 5.6 : 5.1);
+  const pages = isWideScreen ? (device === 'web' ? 4.6 : 5.1) : (device === 'web' ? 5.6 : 5.1);
 
 
 
