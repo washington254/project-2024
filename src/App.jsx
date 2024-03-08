@@ -55,7 +55,7 @@ export default function App() {
     }
     const landingPage = skillsPageBackgroundRef.current;
     landingPage.style.transform = `translateY(-${x}px)`;
-  }, [scrollOffset]);
+  }, [scrollOffset, scrollData, skillsPageBackgroundRef]);
 
   return (
     <main className={`${styles.main} ${device}`}>
@@ -99,7 +99,7 @@ export default function App() {
 
           <SimpleCameraRig></SimpleCameraRig>
 
-          <ScrollControls pages={pages} damping={0.2} maxSpeed={0.7}>
+          <ScrollControls pages={pages} damping={0.5} maxSpeed={1}>
             <ScrollManager
               section={section}
               onSectionChange={setSection}
