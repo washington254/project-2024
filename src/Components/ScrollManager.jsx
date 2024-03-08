@@ -1,19 +1,24 @@
-import { useScroll } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
-import { useEffect, useRef } from 'react';
-import anime from 'animejs';
+import { useScroll } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { useEffect, useRef, useState } from "react";
+
+
+import anime from "animejs";
 
 export const ScrollManager = (props) => {
   const { section, onSectionChange, setScrollOffset, setScrollData } = props;
-  
+
   const data = useScroll();
   setScrollData(data);
 
   const lastScroll = useRef(0);
   const isAnimating = useRef(false);
+  const prevSection = useRef(0);
+  data.fill.classList.add("fixScroll");
 
-  const SCROLL_THRESHOLD = 0.5;  // Define the threshold according to your requirements
-  const TOLERANCE = 0.05; // Define the tolerance according to your requirements
+  const setDelay = useRef(0);
+
+ 
 
   useEffect(() => {
     if (data.el) {
@@ -21,6 +26,7 @@ export const ScrollManager = (props) => {
         targets: data.el,
         scrollTop: section * data.el.clientHeight,
         duration: 1000,
+        delay: setDelay.current,
         begin: () => {
           isAnimating.current = true;
         },
@@ -30,25 +36,30 @@ export const ScrollManager = (props) => {
       });
     }
   }, [section, data.el]);
+  
 
   useFrame(() => {
+    setScrollOffset(data.offset);
     if (isAnimating.current) {
       lastScroll.current = data.scroll.current;
       return;
     }
-
+    // console.log(data.offset,data.scroll.current)
     const curSection = Math.floor(data.scroll.current * data.pages);
-    const diff = data.scroll.current - lastScroll.current;
-
-    if (section === 0 && data.scroll.current > SCROLL_THRESHOLD + TOLERANCE && diff > 0) {
+    if (data.scroll.current > lastScroll.current && curSection === 0) {
       onSectionChange(1);
-    } else if (section === 1 && data.scroll.current < SCROLL_THRESHOLD - TOLERANCE && diff < 0) {
-      onSectionChange(0);
+      setDelay.current = 100;
     }
-
+    if (
+      data.scroll.current < lastScroll.current &&
+      data.scroll.current < 1 / (data.pages - 1)
+    ) {
+      onSectionChange(0);
+      setDelay.current = 0;
+    }
     lastScroll.current = data.scroll.current;
-    setScrollOffset(data.offset);
   });
 
   return null;
 };
+

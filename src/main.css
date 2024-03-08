@@ -22,8 +22,8 @@ body {
 }
 
 .fixScroll {
-  position: absolute !important;
-  top: 0 !important;
+  position: absolute ;
+  top: 0 ;
 }
 
 #contact-button-container a{
