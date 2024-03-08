@@ -1,14 +1,11 @@
 import { useScroll } from '@react-three/drei';
-import { useFrame, useThree } from '@react-three/fiber';
-
+import { useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
-
-
 import anime from 'animejs';
 
-const ScrollManager = (props) => {
+export const ScrollManager = (props) => {
   const { section, onSectionChange, setScrollOffset, setScrollData } = props;
-
+  
   const data = useScroll();
   setScrollData(data);
 
@@ -23,7 +20,7 @@ const ScrollManager = (props) => {
       anime({
         targets: data.el,
         scrollTop: section * data.el.clientHeight,
-        duration: 1001,
+        duration: 1000,
         begin: () => {
           isAnimating.current = true;
         },
@@ -35,7 +32,6 @@ const ScrollManager = (props) => {
   }, [section, data.el]);
 
   useFrame(() => {
-    
     if (isAnimating.current) {
       lastScroll.current = data.scroll.current;
       return;
@@ -56,4 +52,3 @@ const ScrollManager = (props) => {
 
   return null;
 };
-export default ScrollManager;
