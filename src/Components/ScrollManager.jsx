@@ -23,7 +23,7 @@ const ScrollManager = (props) => {
       anime({
         targets: data.el,
         scrollTop: section * data.el.clientHeight,
-        duration: 1000,
+        duration: 1001,
         begin: () => {
           isAnimating.current = true;
         },
