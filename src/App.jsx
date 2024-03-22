@@ -107,13 +107,11 @@ export default function App() {
               setScrollData={setScrollData}
             />
             <Scroll>
-              <Suspense fallback={"loading experience..."}>
-                <Experience
+               <Experience
                   device={device}
                   section={section}
                   cameraRef={cameraRef}
                 />
-              </Suspense>
             </Scroll>
             <Scroll html>
               <Interface device={device} section={section} />
